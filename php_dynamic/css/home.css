@@ -1,0 +1,155 @@
+html,body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* background: rgba(22, 22, 232, .9); */
+
+}
+.homeCont{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(160, 160, 160, .6);
+}
+.homeCont .navBar{
+min-height: 50px;
+    height: 8%;
+    width: 100%;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+    background: rgba(250, 1250, 250, .6);
+    box-shadow: 0px 1px rgba(37, 36, 36, 0.6);
+
+}
+.compName {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    width: 20%;
+    height: 100%;
+    font-weight:bolder;
+}
+.compName h1{
+    margin: auto;
+}
+.navLinks{
+    display: flex;
+    flex-direction: row;
+    flex-grow: initial;
+    margin: 0 10%;
+    width: 60%;
+}
+.navLinks li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.navLinks li:hover{
+    transition: all 1.2s;
+    background: rgba(37, 36, 36, 0.2);
+}
+.navLinks a{
+    color: blue;
+    text-decoration: none;
+    margin: auto
+}
+
+.routeLinks{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 100%;
+}
+
+.routeLinks a{
+    display: flex;
+    width: 100%;
+    height: 60%;
+}
+.routeLinks .profilePic{
+    margin: auto;
+    height: 90%;
+    width: 45%;
+    border-radius: 100%;
+    box-shadow:.3px .3px blue, -.3px -.3px red ;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    
+}
+.routeLinks p{
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: auto auto;
+}
+
+.content{
+    display: flex;
+    height: 100%;
+    background: rgba(37, 36, 36, 0.9);
+}
+.categories{
+    width: 30%;
+    height: 100%;
+    background: rgba(37, 36, 36, 0.7);
+    scroll-behavior: smooth;
+    box-shadow: 1px 0px rgba(160, 255, 160, .6);
+}
+
+.postArea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+}
+.posts{
+    overflow-y: scroll;
+    overflow: wrap;
+    height: 90%;
+    box-shadow: 0 1px rgba(160, 255, 160, .6);
+}
+.postText{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    /* box-shadow: 1px 1px rgba(160, 255, 160, .6),-0px -1px rgba(160, 255, 160, .6); */
+}
+.postText input{
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border: none;
+    box-shadow: 1px 1px rgba(160, 255, 160, .6);
+    outline: none;
+}
+.postText button{
+    font-size: xx-large;
+    margin: auto;
+    width: 10%;
+    border: none;
+    height: 80%;
+    border-radius: 100%;
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+.postCover{
+    padding: 2%;
+    border: 1px solid;
+    margin: 1%;
+    box-shadow: none;
+    height: fit-content;
+    text-overflow: wrap;
+    
+    width: 30%;
+}
+.postCover p{
+    word-break: break-all;
+    word-wrap: break-word;
+    margin: 0;
+}

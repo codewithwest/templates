@@ -1,0 +1,260 @@
+/* Intro Start */
+.prof-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 230px auto;
+}
+
+.prof-intro-cont {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 100%;
+    padding: 1%;
+    width: 90%;
+    height: 75%;
+    margin: 0% auto;
+    margin-top: 5%;
+    box-shadow: 1.4px 1.4px 2px rgba(18, 18, 18, 0.8),
+        -1.4px -1.4px 2px rgba(18, 18, 18, 0.8);
+}
+
+.prof-img {
+    height: 95%;
+    width: 90%;
+    margin: auto;
+    opacity: .95;
+    box-shadow: 1.4px 1.4px 2px rgba(18, 18, 18, 0.8),
+        -1.4px -1.4px 2px rgba(18, 18, 18, 0.8);
+}
+
+.prof-desc-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+}
+
+.prof-desc p a:hover {
+    text-decoration: underline;
+}
+
+.tech-stacks img {
+    height: 80%;
+    border: none;
+    width: calc(100%/16);
+    margin: auto;
+    border-radius: 20px;
+}
+
+/* Intro End */
+/* Projects Nav Links */
+.proj-nav-btns {
+    background:
+        linear-gradient(20deg,
+            transparent, rgba(11, 11, 11, 0.4),
+            transparent, rgba(100, 100, 100, .5),
+            transparent, rgba(12, 12, 12, 0.5),
+            transparent, rgba(16, 16, 16, 0.4),
+            rgba(100, 100, 100, .5));
+}
+
+.inner-proj-btns-cont {
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    width: 95%;
+    border-radius: 10px;
+    background: rgba(2, 2, 2, 0.2);
+    box-shadow: -2px -2px rgb(22, 22, 22, .5);
+    transition: all 1s;
+}
+
+.inner-proj-btns-cont:hover {
+    box-shadow: 2px 2px rgb(22, 22, 22, .5);
+    background: none;
+    transition: all 2s;
+}
+
+.inner-proj-btns-cont .btns {
+    background: linear-gradient(20deg,
+            transparent, rgba(11, 11, 11, 0.4),
+            transparent, rgba(100, 100, 100, .5),
+            transparent, rgba(12, 12, 12, 0.5),
+            transparent, rgba(16, 16, 16, 0.4),
+            rgba(100, 100, 100, .5));
+    ;
+    border: none;
+    box-shadow: 1px 1px rgb(229, 229, 229, .4);
+    border-radius: 10px;
+    height: 40%;
+    width: 20%;
+    transition: all 2s;
+}
+
+.inner-proj-btns-cont {
+    box-shadow: 1px 1px rgba(153, 161, 4, 0.4);
+}
+
+.inner-proj-btns-cont .btns:hover {
+    background: linear-gradient(-20deg,
+            transparent, rgba(11, 11, 11, 0.4),
+            transparent, rgba(100, 100, 100, .5),
+            transparent, rgba(105, 102, 102, 0.5),
+            transparent, rgba(16, 16, 16, 0.4),
+            rgba(100, 100, 100, .5));
+    box-shadow: -1px -1px rgb(229, 229, 229, .5);
+    border-radius: 15px;
+    height: 40%;
+    width: 20%;
+    transition: all 2s;
+}
+
+/* Projects Display */
+
+
+.proj-overlay {
+    padding: 50px 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.proj-card {
+    justify-content: center;
+    background: linear-gradient(20deg,
+            transparent, rgba(11, 11, 11, 0.4),
+            transparent, rgba(100, 100, 100, .5),
+            transparent, rgba(12, 12, 12, 0.5),
+            transparent, rgba(16, 16, 16, 0.4),
+            rgba(100, 100, 100, .5));
+    width: 270px;
+    height: 290px;
+    border-radius: 10px;
+    box-shadow: 1.3px 1.3px rgba(101, 19, 19, 0.9),
+        -1.3px -1.3px rgba(101, 19, 19, 0.9);
+    perspective: 1000px;
+    transition: all 2s;
+}
+
+.proj-card-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 1.8s;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+}
+
+.proj-card-front img {
+    border-radius: inherit;
+}
+
+.proj-card:hover .proj-card-inner:hover {
+    /* should both have hover */
+    transform: rotateY(180deg);
+    /* transition: 4s; */
+}
+
+/* Position the front and back side */
+.proj-card-front,
+.proj-card-back {
+    border-radius: 10px;
+    /* font-size: ; */
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.proj-card-front {
+    background: linear-gradient(20deg,
+            transparent, rgba(11, 11, 11, 0.4),
+            transparent, rgba(100, 100, 100, .5),
+            transparent, rgba(12, 12, 12, 0.5),
+            transparent, rgba(16, 16, 16, 0.4),
+            rgba(100, 100, 100, .5));
+    color: black;
+}
+
+/* Style the back side */
+.proj-card-back {
+    border-radius: inherit;
+    background:
+        linear-gradient(20deg,
+            transparent, rgba(9, 9, 9, 0.5),
+            transparent, rgba(100, 100, 100, .5),
+            transparent, rgba(18, 18, 17, 0.4),
+            transparent, rgba(21, 21, 21, 0.5),
+            transparent, rgba(100, 100, 100, .5),
+            transparent, rgba(100, 100, 100, .5),
+            transparent);
+    color: white;
+    transform: rotateY(180deg);
+    display: grid;
+    grid-template-rows: 10% 78% 12%;
+}
+
+.card-body p {
+    align-items: center;
+    width: 90%;
+}
+
+.card-footer {
+    margin: auto;
+    justify-content: space-between;
+    width: 90%;
+    height: 95%;
+}
+
+.card-footer-tech {
+    justify-content: space-between;
+    width: 50%;
+    box-shadow: 1px 1px rgba(11, 11, 11, 0.4), -1px -1px rgba(11, 11, 11, 0.4);
+}
+
+.card-footer-links {
+    width: 30%;
+    box-shadow: 1px 1px rgba(11, 11, 11, 0.4), -1px -1px rgba(11, 11, 11, 0.4);
+    border-radius: 10px;
+}
+
+.card-footer-links a:hover {
+    background-color: rgba(48, 204, 9, 0.768);
+    border-radius: 30px;
+}
+
+
+
+
+@media only screen and (min-width:900px) {
+
+    .prof-cont {
+        grid-template-rows: 600px 330px auto;
+    }
+
+    .proj-card {
+        width: 370px;
+        height: 390px;
+        border-radius: 10px;
+    }
+
+    .proj-overlay {
+        padding: 80px 10px;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .prof-cont {
+        grid-template-rows: 200px 130px auto;
+    }
+
+    .proj-card {
+        width: 340px;
+        height: 390px;
+        border-radius: 10px;
+    }
+
+    .proj-overlay {
+        padding: 30px 10px;
+    }
+
+}

@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cont {
+    font-size: small;
+    width: 100%;
+    background: rgba(2, 2, 2, .9);
+    /* height: 100%; */
+    color: rgb(87, 245, 87);
+    display: grid;
+    grid-template-columns: repeat(30, calc(100%/30));
+}
+
+.row {
+    /* border: 1px solid; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.row div {
+    margin: 0;
+    height: calc(100%/30);
+
+}
+
+.text {
+    font-size: 40px;
+    position: absolute;
+    align-self: center;
+    color: rgb(87, 245, 87, .3);
+    animation: text 8s;
+}
+
+@keyframes text {
+    10% {
+        font-size: 42px;
+        color: rgb(87, 245, 87, .2);
+    }
+
+    20% {
+        font-size: 44px;
+        color: rgb(87, 245, 87, .4);
+    }
+
+    30% {
+        font-size: 46px;
+        color: rgb(87, 245, 87, .6);
+    }
+
+    40% {
+        font-size: 48px;
+        color: rgb(87, 245, 87, .8);
+    }
+
+    50% {
+        font-size: 50px;
+        color: rgb(87, 245, 87, 1);
+    }
+
+    60% {
+        font-size: 48px;
+        color: rgb(87, 245, 87, .8);
+    }
+
+    70% {
+        font-size: 46px;
+        color: rgb(87, 245, 87, .6);
+    }
+
+    80% {
+        font-size: 44px;
+        color: rgb(87, 245, 87, .4);
+    }
+
+    90% {
+        font-size: 42px;
+        color: rgb(87, 245, 87, .2);
+    }
+
+    /* 90% {
+        font-size: 40px;
+        color: rgb(87, 245, 87, .1);
+    } */
+
+}
+
+@media screen and (min-width: 1000px) {
+    .cont {
+        grid-template-columns: repeat(30, calc(100%/30));
+    }
+}

@@ -1,0 +1,323 @@
+html,
+body {
+    margin: 0;
+    display: flexbox;
+    font-size: .9rem;
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Reusables */
+.border {
+    border: 1px solid;
+}
+
+.und {
+    text-decoration: underline;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+}
+
+.fill-hor {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.m-vert {
+    margin: auto 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.j-sb {
+    justify-content: space-between;
+}
+
+.d-none {
+    display: none;
+}
+
+.header-weight-skills {
+    border-bottom: 1px solid rgb(135, 133, 136);
+}
+
+.header-weight {
+    width: 16%;
+    border-bottom: 1px solid;
+    border-bottom-width: 3.7px;
+    border-bottom-style: dashed;
+}
+
+.header-weight-ed {
+    width: 18%;
+}
+
+.header-weight-skills {
+    width: 27%;
+}
+
+.left-res-cont {
+    margin: 0 auto;
+}
+
+.left-res-cont {
+    display: none;
+}
+
+@media only screen and (min-width: 1100px) {
+    .left-res-cont {
+        display: flex;
+    }
+}
+
+.links {
+    color: inherit;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.progress-bar-size {
+    height: 85%;
+    display: flex;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+/*  */
+
+.container {
+    display: grid;
+    grid-template-columns: 29.6% .2% 70%.2%;
+    grid-template-rows: 100%;
+}
+
+.left-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 15% 65%;
+    background:
+        linear-gradient(200deg, transparent, transparent, rgba(222, 2, 20, 0.9)),
+        linear-gradient(-180deg, transparent, transparent, rgba(22, 2, 22, .8)),
+        linear-gradient(0deg, transparent, transparent, rgba(22, 2, 22, .8)),
+        linear-gradient(330deg, transparent, transparent, rgba(222, 2, 22, .7)),
+        linear-gradient(-330deg, transparent, transparent, rgba(22, 2, 22, .7)),
+        rgba(22, 22, 22, .9);
+    color: #fff;
+}
+
+.pic {
+    width: 60%;
+    height: 95%;
+    border-radius: 100%;
+}
+
+.pic img {
+    border-radius: 100px;
+}
+
+.contacts-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+
+.contacts-cont div {
+    display: flex;
+    justify-self: flex-end;
+    width: 95%;
+    height: 90%;
+    align-items: center;
+}
+
+.contacts-cont div a {
+    text-indent: 5%;
+    text-decoration: none;
+}
+
+.contacts-cont li {
+    list-style: none;
+}
+
+.skills-cont {
+    display: grid;
+    grid-template-columns: 98%;
+    justify-content: center;
+    grid-template-rows: 10% calc(90%/8) calc(90%/8) calc(90%/8) calc(90%/8) calc(90%/8) calc(90%/8) calc(90%/8) calc(90%/8);
+}
+
+.skill {
+    /* border: 1px solid; */
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill p {
+    font-size: .8rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Progress bars */
+.progress-bar-css {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 98%, white 0);
+}
+
+.progress-bar-css::before {
+    content: "98%";
+}
+
+.progress-bar-js {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 85%, white 0);
+}
+
+.progress-bar-js::before {
+    content: "85%";
+}
+
+.progress-bar-react {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 75%, white 0);
+}
+
+.progress-bar-react::before {
+    content: "75%";
+}
+
+.progress-bar-py {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 85%, white 0);
+}
+
+.progress-bar-py::before {
+    content: "85%";
+}
+
+.progress-bar-dart {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 75%, white 0);
+}
+
+.progress-bar-dart::before {
+    content: "75%";
+}
+
+.progress-bar-sql {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 85%, white 0);
+}
+
+.progress-bar-sql::before {
+    content: "85%";
+}
+
+.progress-bar-git {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 90%, white 0);
+}
+
+.progress-bar-git::before {
+    content: "90%";
+}
+
+.progress-bar-fig {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 85%, white 0);
+}
+
+.progress-bar-fig::before {
+    content: "85%";
+}
+
+.progress-bar-docker {
+    background:
+        radial-gradient(closest-side, rgb(57, 2, 81) 70%, transparent 80% 100%),
+        conic-gradient(green 65%, white 0);
+}
+
+.progress-bar-docker::before {
+    content: "65%";
+}
+
+.right-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 14% 14% 29% 39%;
+    row-gap: 1%;
+    font-weight: .7rem;
+}
+
+.inner-name {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(10deg, rgba(22, 22, 22, .4), rgba(22, 22, 22, .1),
+            rgba(22, 22, 22, .4));
+}
+
+.bio-txt {
+    font-size: .9rem;
+    width: 90%;
+}
+
+.proj-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 5% 42.5% 42.5%;
+    font-size: .9rem;
+}
+
+.proj-links {
+    width: 10%;
+    justify-content: space-evenly;
+    margin-left: auto;
+}
+
+.edu-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 1% 20% 25% 25% 20%;
+    font-size: .9rem;
+}

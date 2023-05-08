@@ -1,0 +1,109 @@
+.about-body-container{
+    
+    background: url(../images/about-back.jpg);
+    background-position: center;
+    margin: 0%;
+    opacity: 0.62;
+    padding: 0%;
+    height: fit-content;
+}
+
+.wrap{
+    margin: 0;
+    display: flex;
+}
+.wrap .box-texts{
+    margin: 2;
+    display: inline; 
+    position: relative;
+    min-height: fit-content;
+    padding: 10px 10px;
+    width: 100%;
+    margin: 8%;
+
+}
+.wrap .box-texts h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    color:aliceblue !important;
+    text-shadow: inset 10px 10px 21px 100px rgba(125, 125, 125, 0.97);
+
+
+
+}
+
+.wrap .box-mode{
+    
+    border: 1px solid white;
+    padding: 20px 20px;
+    background: linear-gradient(50deg, transparent, transparent,rgba(122, 17 125, 0.7));
+    transition: all 3s;
+}
+.wrap .box-mode:hover{
+    box-shadow: inset -10px -10px 21px 13px rgba(125, 125, 125, 0.7);
+    padding: 3px 5px;
+    color: antiquewhite;
+}
+
+.wrap .box-text1{
+    margin: 2px 2px;
+    display: inline-flex;
+    margin-bottom: auto;
+    margin-top: auto;
+    position: relative;
+    padding-top: 22px;
+    height:fit-content;
+    width:100%;
+    
+    
+    
+}
+.wrap .box-text1 .image1{
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    height: 99%;
+    width: 50%;
+    background-position: center;
+}
+.wrap .box-text1 .image1{
+    height: fit-content;
+    width: fit-content;
+}
+
+.wrap .box-text1 .text1{
+    display: block;
+    height: fit-content;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding: 2px;
+    top: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+      
+}
+
+i a{
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 2s;
+}
+i a:hover{
+    color: black;
+    font-size: large;
+
+}
+
+
+
+
+
+
+
+

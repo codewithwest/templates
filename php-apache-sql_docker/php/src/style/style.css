@@ -1,0 +1,194 @@
+:root{
+    --nav--bar--background--color: #11ffaa ;
+    --nav--size: 35px;
+    --body--text--size: 26px;
+}
+*{
+    margin: 0 0;
+
+}
+/* Covers the whole Body*/
+.body-container{
+
+    width: 100%;
+    height: fit-content;
+}
+/* Covers the whole Nav BAr*/
+.nav-bar-container{
+    width: 100%;
+    background: linear-gradient(30deg, transparent, transparent, var(--nav--size));
+    display: flex;
+    
+}
+.nav-bar-container .nav-bar{
+    height: 10vh;
+    width: 100%;
+    box-shadow:  8px 8px 6px rgba(233, 145, 130, 0.1);
+    background: linear-gradient(10deg, transparent, rgba(76, 87, 76, 0.3)), linear-gradient(-10deg, transparent, rgba(233, 145, 130, 0.3));
+    margin:0 0.1%;
+    display: flex;
+}
+nav select {
+    text-align: center;
+    font-size: var(--nav--size);
+    font-weight: 400;
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    user-select: auto;
+  }
+
+.nav-bar-container nav{ 
+    width: 100%;
+    display: flex; 
+    height: 100%;     
+}
+
+nav  li {
+    
+    margin: auto auto;
+    font-size: var(--nav--size);
+    display: inline-block;
+    
+    
+}
+@media (max-width: 600px) {
+    nav li    { display: none; }
+    nav select { display: inline-block; }
+  }
+
+
+/* Covers the whole Footer*/
+.footer-container{
+    display: flex;
+    width: 100%;
+    
+    background: linear-gradient(45deg, transparent, transparent, rgba(145,145,111,0.8)), 
+    linear-gradient(-40deg, transparent, transparent, rgba(145,145,111,0.8));
+}
+/* Footer Starts*/
+.footer-container .footer{
+ margin: 1px 1px;
+ display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+/* Subscribe Box*/
+.subscribe{
+    height: 100%;   
+}
+.footer-container .footer .subcribe-contents {
+    height: 100%;
+    width:  100%;
+    
+}
+/* Form wrapper*/
+.footer-container .footer .subscribe .wrapper{
+    display: flex;
+    width: 100%;
+    
+}
+
+.footer-container .footer .subscribe form{
+    width: 70%;
+    border-radius: 10%;
+    display: flex;
+    margin: 0 auto;
+    height: 100%;
+    
+}
+
+.footer-container .footer form #email-text{
+    height: 100%;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: calc(var(--nav--size)/2);
+}
+.footer-container .footer form #submit-button{
+    text-align: center;
+    background: rgba(233, 145, 130, 0.3);
+    border: 1px solid black;
+    font-size: 100%;
+    font-weight: 500;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.footer-container .footer .text{
+    display: flex;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Contacts Box*/
+.contacts{
+    font-size: x-small;
+    display: flex;
+   
+    height: 100%;
+   
+}
+.contacts .contacts-blocks{
+   padding-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    width: 58%;
+    margin: 0 auto;
+}
+
+
+.contacts .contacts-blocks  li{
+    background: blue;
+    width: 20%;
+    
+    margin: auto auto;
+    font-size: var(--nav--size);
+    display: inline-block;
+    border-radius: 100%;
+}
+.contacts .contacts-contents{
+    height: 100%;
+    width:  100%;
+}
+.contacts .contacts-contents .text{
+    font-size: calc(var(--nav--size)/2);
+    display: flex;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+
+}
+#footer-grid{
+    padding: 8px 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+@media (max-width:600px) {
+    .footer-container{
+        padding: 5px 0;
+       
+    }
+    .footer-container .footer{
+        display: inline;
+    }
+   
+    #footer-grid{
+        width: 100%;
+         display: inline-flex;
+         height: 100%;
+         
+        }
+  }
+
+  p{
+    float: right;
+  }
+
+

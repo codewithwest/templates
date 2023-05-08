@@ -1,0 +1,400 @@
+html,
+body {
+    margin: 0;
+    color: rgba(230, 230, 230, .8);
+}
+
+.contact-svg {
+    height: 16px;
+    width: 16px;
+}
+
+/* Default */
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.p-tag {
+    margin: auto;
+    width: 90%;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.border-1 {
+    border: 1px solid;
+}
+
+.card-icons {
+    width: 40px;
+    height: 40px;
+    transform: rotate(90deg);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* main div */
+.main-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px 150px;
+}
+
+.sub-div {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 -1px rgba(50, 50, 50, .5);
+}
+
+/* nav div */
+.nav {
+    /* display: none; */
+    background: rgba(4, 4, 4, .95);
+}
+
+.navbar-cont {
+    background: rgba(3, 3, 3, .70);
+    height: 30%;
+}
+
+.nav-logo {
+    background: rgba(15, 15, 15, .3);
+    width: 30%;
+}
+
+.nav-pad {
+    width: 70%;
+}
+
+.nav-pad .nav-link-cont {
+    width: 40%;
+    margin: auto;
+}
+
+.nav-link-cont a li {
+    list-style: none;
+    margin: auto;
+}
+
+.nav-pad .nav-link-cont a {
+    font-size: .8rem;
+    text-decoration: none;
+    color: inherit;
+    padding: 3% 2%;
+}
+
+.nav-pad .nav-link-cont a:hover {
+    background: rgba(30, 30, 30, .90);
+}
+
+/* nav Content */
+.nav-content {
+    height: 70%;
+    display: flex;
+}
+
+.nav-content-divs {
+    width: calc(100%/3);
+    height: 100%;
+}
+
+.nav-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-content-1,
+.nav-content-3 {
+    display: grid;
+    grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
+}
+
+.nav-content-1 .nav-content-name {
+    font-weight: 800;
+    text-align: center;
+}
+
+.nav-content-1 .nav-content-resume {
+    width: 40%;
+    height: 60%;
+    margin: auto;
+    box-shadow: 1px 1px rgba(150, 15, 15, .3),
+        -1px -1px rgba(150, 15, 15, .3);
+    border-radius: 10px;
+    font-weight: inherit;
+}
+
+.nav-content-1 .nav-content-resume:hover {
+    font-weight: 700;
+    background: rgba(50, 50, 50, .2);
+}
+
+.nav-content-2 {
+    background: url('west.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.nav-contacts {
+    width: 50%;
+    justify-self: end;
+    justify-content: space-around;
+    margin-right: 10%;
+}
+
+/* sub-div-1 */
+.sub-div-1 {
+    background: rgba(5, 5, 5, .94);
+    /* display: none; */
+}
+
+.about-header {
+    height: 20%;
+}
+
+.about-cards {
+    height: 70%;
+    /* background: red; */
+}
+
+.about-card-1 {
+    width: calc(25%);
+}
+
+.about-box {
+    width: 90%;
+    height: 60%;
+    background: rgba(7, 7, 7, .2);
+    box-shadow: .71px .71px rgba(10, 10, 10, .7),
+        -.7px -.7px rgba(10, 10, 10, .7);
+    border-radius: 5px;
+}
+
+.box-sub-text {
+    text-align: center;
+    width: 90%;
+    height: 25%;
+}
+
+/* sub-div-2 */
+.sub-div-2 {
+    background: rgba(5, 5, 5, .93);
+}
+
+.projects-body {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+
+.projects-body-nav {
+    height: 10%;
+    width: 50%;
+}
+
+.projects-body-nav a {
+    width: max-content;
+}
+
+.project-link-cont {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: .7rem;
+}
+
+.projects-pics {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 100%;
+    height: 90%;
+    width: 90%;
+}
+
+.pics-col-1,
+.pics-col-2,
+.pics-col-3 {
+    display: flex;
+    height: 90%;
+    width: 90%;
+}
+
+.projects-pics a {
+    background-position: center;
+    background-size: 20%;
+}
+
+.pics-col-1 {
+    justify-content: space-between;
+}
+
+.pics-col-1 a {
+    height: 48%;
+    /* animation: all 5s; */
+}
+
+.pics-col-2 a,
+.pics-col-3 a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.proj-nav {
+    cursor: pointer;
+}
+
+.proj-nav:hover {
+    background: rgb(54, 66, 88);
+}
+
+
+.trans {
+    height: 100%;
+    width: 100%;
+    animation-name: flipIn;
+    animation-duration: .5s;
+    animation-delay: 200ms;
+}
+
+@keyframes flipIn {
+    0% {
+        width: 0%;
+    }
+
+    10% {
+        width: 10%;
+    }
+
+    20% {
+        width: 20%;
+    }
+
+    30% {
+        width: 30%;
+    }
+
+    40% {
+        width: 40%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    60% {
+        width: 60%;
+    }
+
+    70% {
+        width: 70%;
+    }
+
+    80% {
+        width: 80%;
+    }
+
+    90% {
+        width: 90%;
+    }
+}
+
+/* sub-div-3 */
+.sub-div-3 {
+    background: rgba(5, 5, 5, .94);
+
+}
+
+/* footer */
+.footer {
+    background: rgba(5, 5, 5, .95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1000px) {
+
+    /* main div */
+    .main-div {
+        grid-template-rows: 600px 600px 600px 600px 600px;
+        font-size: 1.2rem;
+    }
+
+    .contact-svg {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main-div {
+        grid-template-rows: 300px 300px 300px 300px 300px;
+        font-size: .6rem;
+    }
+
+    .nav-pad .nav-link-cont a {
+        font-size: .6rem;
+    }
+
+    .contact-svg {
+        height: 12px;
+        width: 12px;
+    }
+}

@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    /* font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body,html {
+    background: linear-gradient(0deg,transparent, rgba(10,10,10,.6)),
+    linear-gradient(90deg,transparent, rgba(31, 38, 115, 0.6)),
+    linear-gradient(180deg,transparent, rgba(75, 32, 82, 0.6)),
+    linear-gradient(280deg,transparent, rgba(75, 32, 82, 0.6));
+    display: flex;
+    height:100%;
+    width: 100%;
+    margin: 0 0;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    width: 50%;
+    height: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    
+}
+
+.login h1 {
+    text-align: center;
+    color: #0d49a2;
+    font-size: xx-large;
+    margin: 3% auto;
+    width: 100%;
+    border-bottom: 1.3px solid #dee0e4;
+}
+.login form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70%;
+}
+.login form label {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 5%;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+    display: flex;
+    width: 80%;
+    margin: 2% auto;
+    height: 25%;
+    border: 1px solid #dee0e4;
+  
+}
+.login form input[type="submit"] {
+    width: 60%;
+    height: 25%;
+    margin: auto auto;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+}

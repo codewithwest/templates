@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="anim.css">
+    <link rel="stylesheet" href="wel.css">
+    <link rel="stylesheet" href="const.css">
+</head>
+
+<body>
+    <div class="game-cont center-content">
+        <!-- Banner At the top -->
+        <div class="top-banner">
+            <div class="logo-div d-flex ">
+                <img src="./logo.png" class="m-auto" alt="" srcset="">
+            </div>
+            <div class="game-name center-content">
+                <h1>ROWDY PEPPER</h1>
+            </div>
+        </div>
+        <button class="info">
+            i
+        </button>
+        <!-- Welcome Message -->
+        <div class="welcome-cont center-content">
+            <div class="welcome text-center m-auto center-content flex-col">
+                <h1>Welcome To ROWDY PEPPER</h1> <br>
+                <h2></h2>Inspired by Load Shedding</h2>
+            </div>
+        </div>
+        <!-- Game Instructions -->
+        <div class="ins-to-play-game">
+            <button class="ins-col-btn center-content">X</button>
+            <div class="center-content">
+                <h1>Lets Get Started</h1>
+            </div>
+            <div class="ins fill">
+                <div class="how m-auto-hor center-content">
+                    <h2 class="m-auto-hor">How to Play</h2>
+                </div>
+                <div class="d-flex">
+                    <ol class="m-auto-hor fill">
+                        <li>
+                            A gamer is given a specified amount of money
+                            when starting the game and is tasked with paying
+                            a specified amount each time they land on a tour
+                            guide.
+                        </li>
+                        <br>
+                        <li>
+                            When the amount of money a gamer has is
+                            depleted the game has been lost.
+
+                        </li><br>
+                        <li>
+                            The aim of the game is to survive while exploring
+                            the best that South Africa has to offer
+                        </li><br>
+                        <li>
+                            Roll the dice to move.
+                        </li><br>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Roll A die cont -->
+        <div class="die-cont flex-col">
+            <button class="play-game m-auto d-flex center-content">
+                <p>Play</p>
+            </button>
+            <h2 class="m-auto die-val d-none"></h2>
+            <button class="die-roll d-none">Roll Die</button>
+        </div>
+        <!-- Cash Container -->
+        <div class="coins center-content text-center"></div>
+        <!-- Score Container -->
+        <div class="scoreboard  center-content text-center">
+
+        </div>
+
+        <div class="cover-cont par-bg transformation">
+            <!-- <div class="landing-cards green">
+
+            </div> -->
+        </div>
+        <div class="pop-up d-none m-auto">
+            <div class="card-mes  m-auto">
+                <button class="d-flex center-content collapse-mes">X</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js" type="module"></script>
+<script src="wel.js" type="module"></script>
+<script src="gamelogic.js" type="module"></script>
+
+</html>
