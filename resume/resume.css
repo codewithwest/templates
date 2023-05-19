@@ -1,27 +1,29 @@
 html,
 body {
-    margin: 0 0;
-    height: 100%;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 1vh;
+    /* height: 100%; */
 }
 
-#content {
-    font-size: small;
+.content {
+    font-size: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 800px;
-    /* min-width: 750px; */
-    height: 99%;
-    width: 100%;
 }
 
 .resume {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    /* box-shadow: inset 2px 2px 2px rgba(22, 22, 22, .9); */
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    box-shadow: inset 2px 2px 2px rgba(22, 22, 22, .9);
 }
 
 .leftCont {
+    display: grid;
+    grid-template-rows: 140px 110px 520px 100px;
+    gap: 5px;
+    grid-template-columns: 95%;
+    justify-content: center;
     background:
         linear-gradient(200deg, transparent, transparent, rgba(222, 2, 20, 0.9)),
         linear-gradient(-180deg, transparent, transparent, rgba(22, 2, 22, .8)),
@@ -29,56 +31,22 @@ body {
         linear-gradient(330deg, transparent, transparent, rgba(222, 2, 22, .7)),
         linear-gradient(-330deg, transparent, transparent, rgba(22, 2, 22, .7)),
         rgba(22, 22, 22, .9);
-    height: 100%;
-    width: 30%;
-
     color: #fff;
 }
 
-.rightCont {
-    /* background:     radial-gradient(100px,rgba(40, 40, 221, 0.2),transparent,rgba(38, 246, 52, 0.2),transparent,rgb(241, 17, 17,.2),white); */
-
-    height: 100%;
-    width: 70%;
-
-    /* box-shadow: inset 2px 2px 2px rgba(22, 22, 22, .1), inset -2px -2px 2px rgba(22, 22, 22, .1); */
-
-}
-
-.imageCont {
-
-    height: 15%;
-    width: 90%;
-    display: flex;
-    margin: auto auto;
-}
-
 .image {
-    width: 55%;
+    width: 60%;
     height: 90%;
-    margin: auto auto;
-    box-shadow: 1px 1px 2px rgba(22, 22, 22, .5), -1px -1px 2px rgba(22, 22, 22, .5);
-
-    border-radius: 100%;
-    background-size: 100%;
-
-    background-repeat: no-repeat;
+    box-shadow: 1px 1px 2px rgba(22, 22, 22, .5),
+        -1px -1px 2px rgba(22, 22, 22, .5);
+    border-radius: 100px;
 }
 
 /* Contacts div */
 .contactsCont {
-    height: 15%;
     width: 90%;
-    margin: 5% auto;
-    display: flex;
+    margin: 2% auto;
     text-align: left;
-}
-
-.contacts {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
 }
 
 .contacts-p {
@@ -94,17 +62,13 @@ body {
     display: flex;
     flex-direction: row;
     height: 75%;
-
 }
 
 .contacts-d-icon {
-
     width: 10%;
-    height: 100%;
-
-    background-position-x: 0;
-    background-position-y: 100%;
-    background-repeat: no-repeat;
+    height: 90%;
+    align-self: flex-end;
+    margin-right: 2%;
     background-size: 90%;
 }
 
@@ -112,27 +76,26 @@ body {
     width: auto;
     margin-top: auto;
     text-decoration: none;
-    color: #fff;
     display: flex;
-
-
-
-    text-align: center;
 }
 
 .contacts-d-link:hover {
-
     text-decoration: underline;
 }
 
 /* Skills div */
 
 .skillsCont {
-    display: flex;
-    flex-direction: column;
-    margin: auto auto;
-    height: 70%;
     width: 90%;
+}
+
+.interestsCont p {
+    height: 20%;
+}
+
+.interestsCont li {
+    padding-left: 5px;
+    list-style: none;
 }
 
 .skills-p {
@@ -151,7 +114,7 @@ body {
 }
 
 .skills {
-    margin: 3.5% 0;
+    margin: 3% 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -169,72 +132,50 @@ progress {
 
 /* Right Start */
 .right {
+
     width: 100%;
-    height: 95%;
-    margin: auto 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 150px 80px 165px 170px 210px;
 }
 
 .nameCont {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+
     margin-top: 1%;
-    height: 27%;
     width: 95%;
     background: linear-gradient(0deg, transparent, transparent, rgba(22, 2, 22, .1)),
         linear-gradient(10deg, transparent, transparent, rgba(22, 2, 22, .1)),
         linear-gradient(-180deg, transparent, transparent, rgba(22, 2, 22, .1),
             rgba(22, 22, 22, .1));
-
     box-shadow: 1px 1px 2px rgba(28, 3, 23, 0.2), -1px -1px 2px rgba(28, 3, 23, 0.2);
 
 }
 
 .name {
-    display: flex;
+    font-size: 16px;
     height: 65%;
-    width: 100%;
-
 }
 
 .title {
-
-    display: flex;
-    flex-direction: column;
+    font-size: 15px;
     height: 45%;
-    width: 100%;
 }
 
-.nameCont p {
-    text-align: center;
-    font-size: medium;
-    width: 100%;
-    margin: auto 0;
-    font-weight: bold;
-}
 
 .line {
     width: 50%;
     height: 3%;
     border-radius: 10%;
     background: rgba(22, 22, 22, .5);
-    margin: auto auto;
 }
 
 /* Summary */
 
 .summaryCont {
-    display: flex;
-    flex-direction: column;
     margin: 1% auto;
-
-    height: fit-content;
+    /* height: fit-content; */
     width: 95%;
-    /* box-shadow: 1px 1px 2px rgba(188, 3, 213, 0.2),-1px -1px 2px rgba(188, 3, 213, 0.2); */
-
 }
+
 
 .summary-h,
 .project-h {
@@ -243,39 +184,27 @@ progress {
 
 .summary-p,
 .project-p {
-    height: 100%;
     font-weight: bold;
-
-    margin: 0 0;
+    margin: 0;
 }
 
 .summary {
-
-    display: flex;
-
-    height: 70%;
-    width: 100%;
-    margin-top: 2%;
+    /* height: 70%; */
+    margin-top: 1%;
 }
 
 .summary-text {
     height: 80%;
     width: 90%;
     margin: 0;
-
-
 }
 
 /* Projects */
 .projectCont,
 .educationCont {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
     height: fit-content;
     width: 95%;
     margin-top: 1%;
-
 }
 
 .project-name-div,
@@ -283,7 +212,6 @@ progress {
     margin-top: 1%;
     display: inline-block;
     width: 100%;
-
     overflow: hidden;
 
 }
@@ -321,7 +249,6 @@ progress {
 }
 
 .project-links {
-
     display: flex;
     margin-top: .5%;
 
@@ -350,11 +277,9 @@ progress {
 }
 
 .education-local {
-
     font-weight: 600;
     display: flex;
-    height: 10%;
-
+    height: 6%;
 }
 
 .education-local p {
@@ -363,7 +288,10 @@ progress {
 
 .education-desc p {
     margin: 0 0;
+}
 
+.lists {
+    margin-left: 2%;
 }
 
 @media only screen and (min-width: 800px) {
