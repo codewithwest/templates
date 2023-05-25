@@ -15,6 +15,11 @@ export let home = () => {
                         ["Connex Clone", "A Front-end design clone of the <a class='link' href='https://connex.co.za'> Connex store </a>, clones only the landing page with drop downs, the project was use to demonstrate the manipulation of the DOM using pure JavaScript"],
                         ['css', 'js', 'mysql'],
                         ['https://codewithwest.github.io/templates/connex_clone/', 'https://github.com/codewithwest/templates/tree/master/connex_clone']],
+                    ['projects/web/rowdyp',
+                        ["Fsca Hackerthorn", 
+                        "This a 12 hours project built with html css and js for a hackerthon that aims to financially educate people using games, this game mimics monopoly just with a touch of south african feel."],
+                        ['html', 'css', 'js'],
+                        ['https://codewithwest.github.io/templates/fsca_hacker/', 'https://github.com/codewithwest/templates/tree/master/fsca_hacker']],
                 ],
                 mobile: [
                     ['projects/mobile/flutter',
