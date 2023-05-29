@@ -1,64 +1,66 @@
-html body{
-margin: 0;
-padding: 0;
+html body {
+  margin: 0;
+  padding: 0;
 }
-body {
-    font-family:'Times New Roman', Times, serif;
-    font-weight: 100;
-  }
 
-  .container {
-    margin: 0 auto;
-    max-width: 940px; 
-    padding: 0 10px;
-  }
-.header{
-    background: url(" ./dark.png") no-repeat center center;
-    color:white;
-    background-size: cover;
-    text-align: center;
-    height: 900px;  
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 940px;
+
+  padding: 0 10px;
+}
+
+.header {
+  background: url(" ./dark.png") no-repeat center center;
+  color: white;
+  background-size: cover;
+  text-align: center;
+  height: 900px;
 }
 
 
 .header .container {
-    position: relative;
-    top: 200px;
-  }
-  
+  position: relative;
+  top: 200px;
+}
+
+.header h1 {
+  color: #fff;
+  line-height: 100px;
+  font-size: 80px;
+  margin-top: 0;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+@media (min-width:850px) {
   .header h1 {
-    color: #fff;
-    line-height: 100px; 
-    font-size: 80px;
-    margin-top: 0;
-    margin-bottom: 80px;
-    text-transform: uppercase; 
+    font-size: 120px;
   }
-  
-  @media (min-width:850px) {
-    .header h1 {
-      font-size: 120px;
-    }
-  }
-  
-  .header p {
-    color: #fff;
-    font-weight: 500;
-    font-size: large;
-    letter-spacing: 8px;
-    margin-bottom: 40px;
-    margin-top: 0;
-    text-transform: uppercase; 
-  }
-  
-  .btn {
-    color: #fff;
-    background: #000;
-    padding: 10px 40px;
-    text-decoration: none; 
-    transition: background .5s; 
-  }
-  
+}
+
+.header p {
+  color: #fff;
+  font-weight: 500;
+  font-size: large;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.btn {
+  color: #fff;
+  background: #000;
+  padding: 10px 40px;
+  text-decoration: none;
+  transition: background .5s;
+}
 
 
 
@@ -70,33 +72,34 @@ body {
 
 
 
-.navigation{
-    background: linear-gradient(40deg, transparent, transparent, #010),linear-gradient(-40deg, transparent,  #010);
-    height: 80px;
-    width: 100%;
+
+.navigation {
+  background: linear-gradient(40deg, transparent, transparent, #010), linear-gradient(-40deg, transparent, #010);
+  height: 80px;
+  width: 100%;
 
 }
 
 
 .navigation ul {
-    height: 80px;
-    list-style: none;
-    margin: 0 auto; 
-    padding: 0;
-  }
-  
-  .navigation ul li {
-    color: #fff;
-    display: inline-block; 
-    height: 80px;
-    line-height: 80px; 
-    list-style: none;
-    padding: 0 10px;
-    transition: background .5s; 
-  }
-  .navigation ul li:hover {
-    background: #f711ff;
-    cursor: pointer; 
-    transition: background .5s;  
-  }
+  height: 80px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
 
+.navigation ul li {
+  color: #fff;
+  display: inline-block;
+  height: 80px;
+  line-height: 80px;
+  list-style: none;
+  padding: 0 10px;
+  transition: background .5s;
+}
+
+.navigation ul li:hover {
+  background: #f711ff;
+  cursor: pointer;
+  transition: background .5s;
+}
