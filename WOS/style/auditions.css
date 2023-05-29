@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    display: flexbox;
+    font-size: 12px;
+}
+
+.auditions-wrapper {
+    display: grid;
+    grid-template-rows: 25vh auto 10vh auto;
+    min-height: 1vh;
+}
+
+.auditions-nav {
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+}
+
+/* Top Nav Style */
+.top-nav {
+    /* background: red; */
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 20% 50% 30%;
+}
+
+.top-nav-logo {
+    width: 40%;
+    height: 50%;
+}
+
+.top-nav-search-bar>input {
+    width: 90%;
+    height: 35%;
+}
+
+.top-nav-help-sign-lang {
+    display: grid;
+    grid-template-columns: 20% 40% 20%;
+    justify-content: flex-end;
+}
+
+.top-nav-help {
+    width: 100%;
+}
+
+.top-nav-help,
+.top-nav-sign-in,
+.top-nav-lang {
+    height: 30%;
+
+}
+
+.top-nav-sign-in {
+    color: #fff;
+    background: red;
+}
+
+.top-nav-lang {
+    width: 90%;
+}
+
+/* Bottom nav Style */
+.bottom-nav {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1.5px solid red;
+}
+
+.bottom-nav a {
+    align-self: center;
+    box-shadow: inset .3px .3px rgba(22, 22, 22, .6),
+        inset -.3px -.3px rgba(22, 22, 22, .6);
+    background: #fff;
+    color: rgba(127, 116, 116, .8);
+    height: 40%;
+    width: calc(100%/7);
+}
+
+/* Content */
+
+.main-content {
+    width: 80%;
+    min-height: 100vh;
+    margin-bottom: 50px;
+}
+
+.header-cont {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+.filters,
+.filter h2,
+.filter a,
+.filter p {
+    width: 90%;
+}
+
+.filter h2 {
+    height: 12%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.filter a {
+    font-size: small;
+    flex-direction: row-reverse;
+    text-decoration: underline;
+    color: red;
+}
+
+.filter {
+    height: 35vh;
+    box-shadow: .3px .3px 2px rgba(22, 22, 22, .4),
+        -.3px -.3px 2px rgba(22, 22, 22, .4);
+}
+
+.audition-local {
+    border-top: 2.2px dotted red;
+    width: 90%;
+    height: 12%;
+    align-items: flex-end;
+}
+
+.audition-local p {
+    width: auto;
+}
+
+.online-audition-toogle {
+    background: rgba(174, 174, 174, 0.105);
+    margin-left: 0;
+    width: 7%;
+    height: 60%;
+    margin-left: 2%;
+    border-radius: 50px;
+    box-shadow: inset .7px .7px rgba(22, 22, 22, .6),
+        inset -.6px -.7px rgba(22, 22, 22, .6);
+}
+
+.online-audition-toogle>div {
+    width: 50%;
+    background: rgba(22, 22, 22, .6);
+}
+
+.filters {
+    height: 65%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.filters>div {
+    display: flex;
+    justify-content: center;
+}
+
+.filters>div>select {
+    width: 70%;
+    height: 30%;
+    margin-right: 0 auto;
+}
+
+.filters>div>input {
+    width: 70%;
+    margin-right: 0 auto;
+}
+
+.selection-sort-cont {
+    flex-direction: row-reverse;
+}
+
+/* Selection sort */
+.selection-sort {
+    flex-direction: row-reverse;
+    width: 15%;
+    height: 5vh;
+    border: 1px solid red;
+    margin: 1vh;
+}
+
+.filtered-card-cont {
+    height: 35vh;
+    box-shadow: .3px .3px 2px rgba(22, 22, 22, .4),
+        -.3px -.3px 2px rgba(22, 22, 22, .4);
+    margin-bottom: 20px;
+}
+
+.filtered-card {
+    width: 90%;
+    height: 80%;
+}
+
+.filtered-card img {
+    width: 40%;
+    opacity: .1;
+    box-shadow: .3px .3px 2px rgba(22, 22, 22, .4),
+        -.3px -.3px 2px rgba(22, 22, 22, .4);
+}
+
+.filtered-card-text {
+    display: grid;
+    grid-template-rows: 15% 20% 15% 15% auto;
+    grid-template-columns: 95%;
+    justify-content: flex-end;
+}
+
+.filtered-card-icon {
+    position: absolute;
+    justify-self: flex-end;
+    height: 5%;
+    width: 5%;
+}
+
+/* Auditions Pagination */
+.auditions-pagination {
+    width: 30%;
+    height: 70%;
+}
+
+/* main footer */
+.auditions-footer {
+    font-size: 10px;
+    color: #fff;
+    background: rgba(226, 6, 6, 0.8);
+    height: 35vh;
+}
+
+.footer-main-cont {
+    display: grid;
+    grid-template-columns: 45% 35%;
+    justify-content: space-between;
+    width: 85%;
+    height: 90%;
+}
+
+.footer-about,
+.footer-offers,
+.footer-support {
+    height: 80%;
+    width: auto;
+    margin-left: 5%;
+    display: grid;
+    grid-template-rows: 20% auto auto auto auto;
+}
+
+.footer-about a,
+.footer-offers a,
+.footer-support a {
+    height: 10%;
+}
+
+.footer-info,
+.footer-text,
+.footer-follow-link,
+.footer-company-name {
+    height: 45%;
+}
+
+.footer-follow-link {
+    width: 70%;
+    align-items: center;
+
+}
+
+.footer-follow-link>img,
+.footer-company-name>img {
+    width: 15%;
+    height: 60%;
+    border-radius: 100px;
+}
+
+.footer-company-name {
+    width: 80%;
+}
+
+
+
+@media only screen and (min-width: 900px) {
+    * {
+        font-size: 14px;
+    }
+
+    .top-nav-logo {
+        width: 30%;
+        height: 50%;
+    }
+
+    .auditions-wrapper {
+        grid-template-rows: 35vh auto 15vh auto;
+    }
+
+    .header-cont {
+        height: 15vh;
+    }
+
+    .filter {
+        height: 40vh;
+    }
+
+    .online-audition-toogle {
+        width: 4%;
+    }
+
+    .online-audition-toogle>div {
+
+        width: 50%;
+    }
+
+    .selection-sort {
+        width: 10%;
+        height: 7vh;
+    }
+
+    .filtered-cards-cont {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1%;
+    }
+
+    .filtered-card-cont {
+        height: 35vh;
+        width: 48%;
+
+    }
+
+    .filtered-card-icon {
+        width: 2.5%;
+    }
+
+    .auditions-footer {
+        height: 40vh;
+    }
+
+    .footer-main-cont,
+    .footer-follow-link {
+        width: 60%;
+    }
+
+    .footer-follow-link>img,
+    .footer-company-name>img {
+        width: 15%;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    * {
+        font-size: 8px;
+    }
+
+    .auditions-footer {
+        font-size: 6px;
+    }
+}
