@@ -2,7 +2,7 @@ import '../styles/Home.css';
 import '../styles/Const.css';
 import one from '../assets/0.jpg'
 import { useState, useEffect } from 'react';
-import { initial_form_data } from '../dataSchema/schemas.js';
+import {  initial_registration_form_data } from '../dataSchema/schemas.js';
 
 export default function Home() {
     let [first, setfirst] = useState(0)
@@ -12,7 +12,7 @@ export default function Home() {
     setInterval(() => IncNum(first), 1000)
 
 
-    const [formdata, setFormData] = useState(initial_form_data);
+    const [formdata, setFormData] = useState(initial_registration_form_data);
     const display = () => console.log(formdata)
     const handleChange = (e) => {
         setFormData({ ...formdata, [e.target.name]: e.target.value })
@@ -30,7 +30,7 @@ export default function Home() {
 
     const handleSubmit = async (_formdata) => {
         display()
-        fetch('http://192.168.241.34:3070/velocity_knight_trainer/register/', {
+        fetch('http://localhost:3070/velocity_knight_trainer/register/', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
