@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/anim.css">
+    <link rel="stylesheet" href="./style/welcome.css">
+    <link rel="stylesheet" href="./style/const.css">
+    <link rel="stylesheet" href="./style/pick_a_player.css">
+    <link rel="stylesheet" href="./style/audio.css">
+</head>
+
+<body>
+    <div class="game-cont center-content">
+        <!-- Banner At the top -->
+        <div class="top-banner">
+            <div class="logo-div d-flex ">
+                <img src="./images/logo.png" class="m-auto" alt="" srcset="">
+            </div>
+            <div class="game-name d-flex center-content">
+                <h1>ROWDY PEPPER</h1>
+            </div>
+        </div>
+        <button class="info">
+            i
+        </button>
+        <!-- Welcome Message -->
+        <div class="welcome-cont center-content">
+            <div class="welcome text-center m-auto center-content flex-col">
+                <h1>Welcome To VORTEX DRAGON</h1> <br>
+                <h2></h2>Inspired by Dragon Ball</h2>
+            </div>
+        </div>
+        <!-- Choose your player -->
+        <div class="choose-player d-flex center-content fill bg-success pos-abs top-0 left-0">
+            <div class="choose-player-content d-grid bg-fail">
+                <div class="choose-player-header d-flex center-content fw-bold fill">
+                    <h1> Choose Your Character</h1>
+                    <button class="choose-player-collapse pos-abs">X</button>
+                </div>
+                <div class="choose-player-players d-flex">
+                    <!-- Player Chosen Pop Up -->
+                    <div class="player-chosen pos-abs d-grid  center-self">
+                        <!-- Player chosen image and collapse button -->
+                        <div class="player-chosen-image d-grid">
+                            <img class="m-auto" src="./images/logo.jpg" alt="">
+                            <!-- Player chosen collapse -->
+                            <button class="collapse-player-chosen-pop-up 
+                                fw-bold b-none bg-none">
+                                X
+                            </button>
+                        </div>
+                        <div class="chosen-player-name-cont fill d-grid">
+                            <h2 class="chosen-player-name fill d-flex center-content">
+                                Player-Choice
+                            </h2>
+                            <button class="select-player pos-rel w-100  b-none bg-none fw-bold">Play Game
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Audio Cont -->
+        <div class="audio-cont d-flex center-content">
+            <audio class="fill" src="./audio/dragonball0.m4a" controls autoplay></audio>
+        </div>
+
+        <!-- Game Instructions -->
+        <div class="ins-to-play-game">
+            <button class="ins-col-btn center-content">X</button>
+            <div class="center-content">
+                <h1>Lets Get Started</h1>
+            </div>
+            <div class="ins fill">
+                <div class="how m-auto-hor center-content">
+                    <h2 class="m-auto-hor">How to Play</h2>
+                </div>
+                <div class="d-flex">
+                    <ol class="m-auto-hor fill">
+                        <li>
+                            A gamer is given a specified amount of money
+                            when starting the game and is tasked with paying
+                            a specified amount each time they land on a tour
+                            guide.
+                        </li>
+                        <br>
+                        <li>
+                            When the amount of money a gamer has is
+                            depleted the game has been lost.
+
+                        </li><br>
+                        <li>
+                            The aim of the game is to survive while exploring
+                            the best that South Africa has to offer
+                        </li><br>
+                        <li>
+                            Roll the dice to move.
+                        </li><br>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Roll A die cont -->
+        <div class="die-cont flex-col">
+            <button class="play-game m-auto d-flex center-content">
+                <p>Play</p>
+            </button>
+            <h2 class="m-auto die-val d-none"></h2>
+            <button class="die-roll d-none">Roll Die</button>
+        </div>
+        <!-- Cash Container -->
+        <div class="coins center-content text-center"></div>
+        <!-- Score Container -->
+        <div class="scoreboard  center-content text-center">
+
+        </div>
+
+        <div class="cover-cont par-bg transformation">
+            <!-- <div class="landing-cards green">
+
+            </div> -->
+        </div>
+        <div class="pop-up d-none m-auto">
+            <div class="card-mes  m-auto">
+                <button class="d-flex center-content collapse-mes">X</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/global.js" type="module"></script>
+<script src="js/functions.js" type="module"></script>
+<script src="js/script.js" type="module"></script>
+<script src="js/welcome.js" type="module"></script>
+<!-- <script src="js/loadGame.js" type="module"></script> -->
+<script src="js/gamelogic.js" type="module"></script>
+<script src="js/players.js" type="module"></script>
+
+</html>

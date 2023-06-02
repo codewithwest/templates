@@ -1,0 +1,91 @@
+.choose-player {
+    /* display: none; */
+    z-index: 17;
+}
+
+.choose-player-content {
+    width: 90%;
+    height: 90%;
+    grid-template-rows: 15% 85%;
+}
+
+.choose-player-header button {
+    width: 5%;
+    height: 5%;
+    align-self: flex-start;
+    justify-self: end;
+}
+
+.choose-player-players {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: .5%;
+}
+
+.choose-player-players:hover {
+    overflow-y: scroll;
+}
+
+.choose-player-players>button {
+    width: calc(100%/4.1);
+    min-height: 25%;
+    opacity: .9;
+}
+
+.player-chosen {
+    box-shadow: 1px 1px 3px rgba(181, 5, 5, 0.7),
+        -1px -1px 3px rgba(181, 5, 5, 0.7);
+    z-index: 18;
+    width: 50%;
+    height: 50%;
+    opacity: .9;
+    margin: 0 20%;
+    /* display: none; */
+    grid-template-rows: 75% 25%;
+    grid-template-columns: 100%;
+    background: linear-gradient(10deg,
+            rgba(22, 22, 22, .8), transparent,
+            rgba(22, 22, 22, .8), transparent);
+}
+
+.player-chosen-image {
+    grid-template-columns: 80% 20%;
+}
+
+.player-chosen-image img {
+    width: 80%;
+    height: 90%;
+}
+
+.player-chosen-image button {
+    margin-left: auto;
+    font-size: large;
+    width: 50%;
+    height: 15%;
+    color: #fff;
+    background: rgba(22, 22, 22, .7);
+    transition: all 1s;
+}
+
+.player-chosen-image button:hover {
+    transition: all 1s;
+    background: rgba(181, 5, 5, 0.7);
+}
+
+.chosen-player-name-cont {
+    grid-template-columns: 80% 20%;
+}
+
+.chosen-player-name-cont>button {
+    margin-top: auto;
+    color: inherit;
+    height: 70%;
+    box-shadow: 1px 1px rgba(181, 5, 5, 0.7),
+        -1px -1px rgba(181, 5, 5, 0.7);
+    background: rgba(43, 181, 5, 0.7);
+}
+
+.chosen-player-name-cont>button:hover {
+    background: rgba(37, 156, 4, 0.7);
+}

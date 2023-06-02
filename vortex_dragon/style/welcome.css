@@ -1,0 +1,125 @@
+.welcome-cont {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: rgba(16, 17, 17, 0.978);
+    z-index: 50;
+    box-shadow: inset 0 0 0 0px rgba(150, 150, 150, 0.192);
+    display: none;
+}
+
+.welcome {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background: rgba(122, 122, 122, .1);
+    background: radial-gradient(180px,
+            rgba(196, 243, 6, 0.244), transparent, transparent,
+            rgba(244, 51, 7, 0.126), transparent, transparent,
+            rgba(15, 4, 221, 0.39), transparent, transparent,
+            rgba(37, 228, 3, 0.1), transparent, transparent);
+    box-shadow: 2px 2px 2px rgba(211, 214, 222, 0.3),
+        -2px -2px 2px rgba(34, 19, 242, 0.3);
+    transition: all 5s;
+    color: #fff;
+    font-size: 25px;
+}
+
+.ins-to-play-game {
+    width: 70%;
+    height: 90vh;
+    position: absolute;
+    background: rgba(22, 22, 22, .9);
+    z-index: 50;
+    border-radius: 5px;
+    box-shadow: 1px 0 1px rgba(16, 53, 239, 0.8),
+        -1px 0 1px rgba(16, 53, 239, 0.8);
+    transition: all 5s;
+    color: #fff;
+    overflow-y: auto;
+    display: none;
+    grid-template-rows: 20% 75%;
+    grid-template-columns: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ins {
+    background: rgba(22, 22, 22, .5);
+    box-shadow: inset -2px -2px 1px rgba(154, 148, 148, 0.1),
+        inset 2px 2px 1px rgba(154, 148, 148, 0.1);
+    display: grid;
+    grid-template-rows: 20% 80%;
+    overflow: auto;
+}
+
+.how {
+    width: 90%;
+    box-shadow: 0 1px rgba(208, 8, 8, 0.9);
+}
+
+.ins ol {
+    width: 80%;
+    margin-top: auto;
+    height: 95%;
+    list-style-type: circle;
+}
+
+.ins-col-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-radius: 100px;
+    padding: .5%;
+    margin: auto;
+    width: 5%;
+    height: 4%;
+    border: none;
+    transition: all 5s;
+}
+
+.ins-col-btn:hover {
+    background: rgba(110, 235, 20, 0.23);
+    color: #fff;
+
+}
+
+.info {
+    z-index: 45;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 5%;
+    height: 5.3%;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 100px;
+    margin: auto;
+    background: rgba(230, 17, 14, 0.977);
+    color: #fff;
+}
+
+@media screen and (min-width: 1000px) {
+    .welcome-cont {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .welcome,
+    .ins-to-play-game {
+        width: 50%;
+    }
+
+    .info {
+        width: 2.5%;
+    }
+
+    .ins-col-btn {
+        width: 5%;
+        height: 6%;
+        padding: 1%;
+    }
+
+}

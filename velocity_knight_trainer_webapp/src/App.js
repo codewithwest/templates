@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 // import { Route, Routes } from 'react-router-dom';
-import { Suspense, lazy, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { displayHandler } from './functions/ConstFunctions';
 import { logged_in_icon, logged_out_icon } from './functions/ConstIcons';
 import { resolve } from './functions/ConstVars';
@@ -30,9 +30,27 @@ function navigate(_nav_link_div, _ind) {
 function App() {
 
   const [initial_login_state, set_initial_login_state] = useState()
-  fetch(`${resolve}/velocity_knight_trainer/`).then(async res => await res.json()).then(data => data.hasOwnProperty('userid') ? set_initial_login_state(true) : set_initial_login_state(false))
   // initial_login_state_call()
-  console.log(initial_login_state)
+  useEffect(() => {
+    const handleClick = () => {
+      //do something when we click
+      fetch(`${resolve}/velocity_knight_trainer/`)
+        .then(async res => await res.json())
+        .then(data => data.hasOwnProperty('userid')
+          ? set_initial_login_state(true) : set_initial_login_state(false))
+    };
+    const getSession = () => sessionStorage.getItem('token')
+      ? set_initial_login_state(true) : set_initial_login_state(false)
+
+
+    // document.addEventListener('mousedown', handleClick);
+    return () => {
+      getSession()
+      console.log(initial_login_state)
+    };
+  }, [])
+  // return
+  // }
 
   const [login_state, loginState] = useState(initial_login_state)
   function handleLoginState() {

@@ -35,8 +35,10 @@ export default function Login(props) {
     // useEffect(() => {
 
     // }, [])
-    async function loginSuccess() {
+    async function loginSuccess(_session_token) {
         await display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
+        console.log(_session_token)
+        sessionStorage.setItem("token", _session_token)
         props.onChange()
     }
 
@@ -51,7 +53,7 @@ export default function Login(props) {
             .then(res => res.json())
             .then(async res => {
                 await res['success'] ?
-                    await loginSuccess() :
+                    await loginSuccess(res['session']) :
                     console.log(res['failure'])
             })
             .catch((err) => console.log(err))

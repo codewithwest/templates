@@ -1,0 +1,15 @@
+.audio-cont {
+    position: absolute;
+    top: 0;
+    opacity: .02;
+    width: 50%;
+    height: 7%;
+}
+
+.audio-cont audio {
+    height: 100%;
+}
+
+.audio-cont:hover {
+    opacity: .5;
+}
