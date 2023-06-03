@@ -26,36 +26,42 @@ function navigate(_nav_link_div, _ind) {
   });
 }
 
-
 function App() {
 
-  const [initial_login_state, set_initial_login_state] = useState()
+  const [login_state, loginState] = useState()
+  const [user_data, setUserData] = useState()
   // initial_login_state_call()
+  const getPrivateData = () => {
+    //do something when we click
+    fetch(`${resolve}/user/data`, {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        loginState(true)
+        setUserData(data.authorizedData.user)
+        // console.log(data.authorizedData)
+
+      })
+      .catch(err => console.log(err))
+  };
   useEffect(() => {
-    const handleClick = () => {
-      //do something when we click
-      fetch(`${resolve}/velocity_knight_trainer/`)
-        .then(async res => await res.json())
-        .then(data => data.hasOwnProperty('userid')
-          ? set_initial_login_state(true) : set_initial_login_state(false))
-    };
     const getSession = () => sessionStorage.getItem('token')
-      ? set_initial_login_state(true) : set_initial_login_state(false)
-
-
-    // document.addEventListener('mousedown', handleClick);
+    document.querySelector('.get-data').addEventListener('mousedown', getPrivateData);
     return () => {
-      getSession()
-      console.log(initial_login_state)
+      getSession() ? getPrivateData() : loginState(false)
     };
   }, [])
-  // return
-  // }
 
-  const [login_state, loginState] = useState(initial_login_state)
+
+
   function handleLoginState() {
     // Here, we invoke the callback with the new value
     loginState(!login_state);
+    getPrivateData()
   }
 
   return (
@@ -75,13 +81,17 @@ function App() {
       </nav>
 
       <section className='main-cont'>
-        <h1 className='bg-success'>{`${login_state}`}</h1>
+        <h1 className='bg-success'>{login_state ? `${login_state}` : 'Loading. . . '}</h1>
         <Login onChange={handleLoginState} />
         <Register />
-        <Profile onChange={handleLoginState} />
+        <Profile onChange={handleLoginState} value={user_data ? user_data : '...'} />
         <div className='home body-cont'></div>
         <div className='register body-cont'></div>
         <div className='more body-cont'>white cont</div>
+
+        <button className='get-data'>
+          Request Route
+        </button>
       </section>
     </div>
     // <>

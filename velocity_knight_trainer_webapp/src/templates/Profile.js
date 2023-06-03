@@ -32,36 +32,78 @@ export default function Login(props) {
     }
     // let  PostRegData= () =>
 
-    // useEffect(() => {
 
-    // }, [])
     async function loginSuccess() {
         await display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
         props.onChange()
     }
 
-    const handleSubmit = async (_formdata) => {
-        await fetch('http://192.168.19.34:3070/velocity_knight_trainer/login/', {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(_formdata)
-        })
-            .then(res => res.json())
-            .then(async res => {
-                await res['success'] ?
-                    await loginSuccess() :
-                    console.log(res['failure'])
-            })
-            .catch((err) => console.log(err))
-    }
+    // const handleSubmit = async (_formdata) => {
+    //     await fetch('http://192.168.19.34:3070/velocity_knight_trainer/login/', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(_formdata)
+    //     })
+    //         .then(res => res.json())
+    //         .then(async res => {
+    //             await res['success'] ?
+    //                 await loginSuccess() :
+    //                 console.log(res['failure'])
+    //         })
+    //         .catch((err) => console.log(err))
+    // }
+    const user = props.value
 
 
     return (
-        <div className="profile-form-cont d-flex center-content">
-            <button className='reg-form-collapse b-none bg-none'
-                onClick={() => display_handler.displayNone('profile-form-cont')}>X</button>
+        <div className="profile-form-cont fill  center-content">
+
+            <form className='profile-form flex-col'>
+                <button className='profil-form-collapse b-none bg-none'
+                    onClick={(e) => {
+                        e.preventDefault()
+                        display_handler.displayNone('profile-form-cont')
+                    }}>X</button>
+                {/* {[props.value.username]} */}
+                <div>
+                    <label htmlFor="username">Username</label>
+                    <input value={user.username} name="username" type='text' />
+                </div>
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input value={user.email} name="email" type='text' />
+                </div>
+                <div>
+                    <label htmlFor="full_name">Full Name</label>
+                    <input value={user.fullName} name="full_name" type='text' />
+                </div>
+                <div>
+
+                    <button onClick={(e) => {
+                        e.preventDefault()
+                        sessionStorage.clear()
+                        props.onChange()
+                        document.location.reload()
+                    }} className="reset-password" type='submit'>Change Password</button>
+                    <button onClick={(e) => {
+                        e.preventDefault()
+                        sessionStorage.clear()
+                        props.onChange()
+                        document.location.reload()
+                    }} className="profile-update" type='submit'>Update Details</button>
+
+                    <button onClick={(e) => {
+                        e.preventDefault()
+                        sessionStorage.clear()
+                        props.onChange()
+                        document.location.reload()
+                        display_handler.displayNone('profile-form-cont')
+                    }} className="logout-button" type='submit'>Log Out</button>
+
+                </div>
+            </form>
         </div>
     )
 }  

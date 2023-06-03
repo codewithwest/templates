@@ -2,7 +2,7 @@
   "name": "velocity_knight_trainer_webapp",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://192.168.75.34:3070",
+  "proxy": "https://node-rest-six.vercel.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

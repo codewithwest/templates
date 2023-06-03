@@ -12,47 +12,40 @@
 .login-form-cont {
     position: absolute;
     top: 0;
-    display: none;
+    display: flex;
     height: 100%;
     width: 100%;
     background: var(--form-cont-bg);
 }
 
-.login-form {
-    width: 50%;
-    height: 60%;
-    box-shadow: var(--form-box-shadow);
-    display: grid;
-    grid-template-columns: 100%;
-    justify-content: space-between;
-    grid-template-rows: 20% 40% 25% 5%;
 
-}
-
-.login-form-collapse {
-    position: absolute;
-    top: 20%;
-    right: 25%;
-    height: 5%;
-    width: 5%;
-    box-shadow: -.6px .6px rgba(143, 199, 2, 0.4);
-    color: #fff;
-}
-
-.login-header {
-    font-size: 25px;
-    text-shadow: 1px 1px rebeccapurple;
+.login-form a {
+    margin-top: 8px;
+    font-size: small;
 }
 
 .login-form input {
-    background: rgba(143, 199, 2, 0.4);
-    width: 70%;
-    height: calc(40%);
-    box-shadow: -1.5px 1.5px 1px rgba(4, 112, 207, 0.3);
-    text-indent: 5px;
     border-radius: 10px;
-    color: #fff;
-    outline: none;
+    /* background: #7b8638;*/
+    background: none;
+    height: 60px;
+    flex: 1 0 70px;
+    /* width: 80%; */
+    margin: 10px;
+    border: 1px solid rgba(25, 26, 25, 0.7);
+    outline: rgba(4, 112, 207, 0.7);
+    outline-width: 5px;
+}
+
+.login-button {
+    flex: 1 0 80px;
+    height: 40px;
+    width: 50%;
+    margin-top: 5px;
+    background: inherit;
+    box-shadow: 2px 2px rgba(28, 28, 28, .7);
+    border-radius: 10px;
+    transition: all 2s;
 }
 
 .login-form input:focus {
@@ -63,15 +56,6 @@
     background: gray;
 }
 
-.login-form button {
-    width: 50%;
-    background: inherit;
-    height: 60%;
-    box-shadow: 2px 2px rgba(28, 28, 28, .7);
-    border-radius: 10px;
-    /* color: #fff; */
-    transition: all 2s;
-}
 
 .login-form button:hover {
     transition: all 1.2s;
@@ -96,10 +80,11 @@
 
 /* Registration form */
 
+.login-form-cont,
 .reg-form-cont,
 .profile-form-cont {
     position: absolute;
-    display: flex;
+    display: none;
     top: 0;
     background: var(--form-cont-bg);
 }
@@ -163,8 +148,121 @@
     transition: all 2s;
 }
 
-.reg-form button:hover {
+.reg-form button:hover,
+.profil-form-collapse:hover {
     transition: all 1.2s;
     box-shadow: -1.2px -1.2px 2px rgba(28, 28, 28, .7);
     background: rgba(22, 22, 22, .3);
+}
+
+.profile-form-cont {
+    /* display: flex; */
+    /* left: 0; */
+}
+
+.profile-form,
+.login-form {
+    font-size: large;
+    color: #fff;
+    padding: 15px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: var(--form-box-shadow);
+}
+
+.profile-form>div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.profile-form label {
+    text-align: left;
+    flex: 1 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-form input {
+    border-radius: 10px;
+    background: #7b8638;
+    height: 60px;
+    flex: 1 0 200px;
+    border: 1px solid rgba(25, 26, 25, 0.7);
+}
+
+
+
+.profile-form .profile-update,
+.reset-password,
+.logout-button {
+    color: inherit;
+    font-size: small;
+    border: #7b8638;
+    height: 50px;
+    background: rgba(4, 112, 207, 0.7);
+    flex: 1 0 80px;
+    border: 1px solid rgba(25, 26, 25, 0.7);
+    margin: 10px;
+}
+
+.reset-password {
+    background: rgba(255, 51, 0, 0.615);
+}
+
+.logout-button {
+    background: rgba(255, 51, 0, 0.615);
+}
+
+.profil-form-collapse,
+.login-form-collapse {
+    font-size: inherit;
+    color: inherit;
+    position: relative;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(25, 26, 25, 0.7);
+}
+
+@media screen and (max-width:450px) {
+
+    .profile-form,
+    .login-form {
+        width: 60%;
+    }
+
+    .profile-form>div {
+        margin: 5px;
+    }
+
+    .profile-form input {
+        height: 40px;
+    }
+
+    .profile-form .profile-update,
+    .reset-password,
+    .logout-button {
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width:900px) {
+
+    .profile-form,
+    .reg-form {
+        width: 35%;
+    }
+
+    .login-form {
+        width: 30%;
+    }
+
+
+
+    .profile-form .profile-update,
+    .reset-password,
+    .logout-button {
+        flex: 1 0 200px;
+    }
 }

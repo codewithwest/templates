@@ -1,6 +1,6 @@
-import '../../styles/Home.css';
+// import '../../styles/Home.css';
 import '../../styles/Const.css';
-import '../../styles/Login.css';
+// import '../../styles/Login.css';
 import '../../styles/Forms.css';
 
 import { useState, useEffect } from 'react';
@@ -21,7 +21,6 @@ export default function Login(props) {
     }
     setInterval(() => IncNum(first), 1000)
     const [formdata, setFormData] = useState(initial_login_form_data);
-    const [login_response, setLoginResponse] = useState();
     const handleChange = (e) => {
         setFormData({ ...formdata, [e.target.name]: e.target.value })
     }
@@ -31,16 +30,6 @@ export default function Login(props) {
             el.style.boxShadow = "1.5px 1.5px 1px rgba(220,22,11,.6),-1.5px -1.5px 1px rgba(220,22,11,.6)")
     }
     // let  PostRegData= () =>
-
-    // useEffect(() => {
-
-    // }, [])
-    async function loginSuccess(_session_token) {
-        await display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
-        console.log(_session_token)
-        sessionStorage.setItem("token", _session_token)
-        props.onChange()
-    }
 
     const handleSubmit = async (_formdata) => {
         await fetch(`${resolve}/velocity_knight_trainer/login/`, {
@@ -52,46 +41,55 @@ export default function Login(props) {
         })
             .then(res => res.json())
             .then(async res => {
-                await res['success'] ?
-                    await loginSuccess(res['session']) :
-                    console.log(res['failure'])
+                await res ?
+                    loginSuccess(res) :
+                    console.log(res)
             })
             .catch((err) => console.log(err))
     }
 
-
+    function loginSuccess(_session_token) {
+        display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
+        sessionStorage.setItem("token", _session_token['token'])
+        props.onChange()
+        // document.location.reload()
+    }
     return (
         <div className="login-form-cont d-flex center-content">
-            <button className='login-form-collapse b-none bg-none'
-                onClick={(e) => display_handler.displayNone('login-form-cont')}>X</button>
-            {/* <div className='login-form-cont center-content'> */}
-
             <div className='login-success center-content'>
                 <p className='text-center bg-success center-content'>
                     You Have successfully logged In
                 </p>
             </div>
             <h1>{props.value}</h1>
-            <form className='login-form' method="post">
-                <div className='login-header fill center-content'>
-                    <p className='fill center-content fw-bold'>
-                        LOGIN
-                    </p>
-                </div>
-                <div className='login-inputs flex-col center-content'>
-                    <input type='email' minLength={5} onChange={handleChange} name='login_email'
-                        className='login_email login_err b-none m-auto' placeholder='Email' required></input>
-                    <input type='password' onChange={handleChange} name='login_password'
-                        className='login_password login_err b-none m-auto' placeholder='Password' required></input>
-                </div>
-                <div className='center-content fill login-button  '>
-                    <button className='b-none fw-bold' onClick={(e) => {
+            <form className='login-form flex-col' method="post">
+                <button className='login-form-collapse b-none bg-none'
+                    onClick={(e) => {
                         e.preventDefault()
-                        formdata.login_email.length > 0 && formdata.login_password.length > 0 ?
+                        display_handler.displayNone('login-form-cont')
+                    }}>X</button>
+                {/* <div className='login-header fill center-content'> */}
+                <h1 className='fill m-0 center-content fw-bold'>
+                    LOGIN
+                </h1>
+                {/* </div> */}
+                {/* <div className='login-inputs flex-col center-content'> */}
+                <input onChange={handleChange} type='email' minLength={5} name='login_email'
+                    className='login_email login_err m-auto-hor b-none  ' placeholder='Email' required></input>
+                <input onChange={handleChange} type='password' name='login_password'
+                    className='login_password m-auto-hor d-flex login_err b-none ' placeholder='Password' required></input>
+                {/* </div> */}
+                {/* <div className='center-content fill login-button'> */}
+                <button className='b-none fw-bold login-button 
+                    center-content m-auto-hor'
+                    onClick={(e) => {
+                        e.preventDefault()
+                        formdata.login_email.length > 3 && formdata.login_password.length > 3 ?
                             handleSubmit(formdata) :
                             inputErrorHighlight('login_err')
-                    }}>Login</button>
-                </div>
+                    }}
+                >Login</button>
+                {/* </div> */}
                 <a href='' className='links fill center-content'
                     onClick={(e) => {
                         e.preventDefault()
