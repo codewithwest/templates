@@ -1,0 +1,33 @@
+* {
+    display: flexbox;
+    background: #343434;
+}
+
+html {
+    display: flex;
+    min-height: 100%;
+
+}
+
+
+.products-cont {
+    display: flex;
+    flex-direction: row;
+    min-height: auto;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 5px;
+    gap: 10px;
+    border: 2px solid rgba(147, 140, 140, 0.2);
+    align-items: center;
+
+}
+
+.product {
+    border: inherit;
+    width: 300px;
+    flex-grow: inherit;
+    flex-basis: 1;
+    height: 320px;
+    border-radius: inherit;
+}

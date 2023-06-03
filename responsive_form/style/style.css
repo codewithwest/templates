@@ -1,0 +1,72 @@
+* {
+    display: flexbox;
+    margin: 0;
+    background: #343434;
+}
+
+html {
+    display: flex;
+    min-height: 100%;
+}
+
+.company {
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company>.logo {
+    border: 1px dotted green;
+    transform: scale3d(100px);
+    transform: perspective();
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.company>h3 {
+
+    margin: 15px;
+}
+
+.form {
+    display: flex;
+    /* margin: auto; */
+    flex-direction: row;
+    min-height: auto;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+
+    gap: 6px;
+    border: 2px solid rgba(147, 140, 140, 0.2);
+    align-items: center;
+
+}
+
+.form>:nth-child(1),
+.form>:nth-child(2),
+.form>:nth-child(3) {
+    border: inherit;
+    height: 50px;
+    border-radius: inherit;
+}
+
+.email,
+.password {
+    flex: 1 0 220px;
+    text-indent: 5px;
+}
+
+.button {
+    flex: 1 0 80px;
+    background: rgb(65, 107, 223);
+    color: #fff;
+}
