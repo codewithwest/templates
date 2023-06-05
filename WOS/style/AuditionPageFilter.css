@@ -1,0 +1,698 @@
+.audition-page-filter-child {
+    position: absolute;
+    top: 494px;
+    left: 148px;
+    border-radius: var(--br-5xs);
+    background-color: var(--white);
+    box-shadow: 2px 2px 4px 4px rgba(205, 205, 205, 0.25);
+    width: 1624px;
+    height: 532px;
+  }
+  .mdisort-icon1 {
+    position: absolute;
+    top: 1076px;
+    left: 1732px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+  }
+  .company-logo-icon2 {
+    position: absolute;
+    top: 27px;
+    left: 148px;
+    width: 114px;
+    height: 96px;
+    object-fit: cover;
+  }
+  .group-child1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
+    background-color: var(--color-whitesmoke-100);
+    border: 1px solid var(--color-dimgray-300);
+    box-sizing: border-box;
+    width: 800px;
+    height: 60px;
+  }
+  .vector-icon3 {
+    position: relative;
+    width: 19.71px;
+    height: 19.71px;
+  }
+  .akar-iconssearch1 {
+    position: absolute;
+    top: 8px;
+    left: 744px;
+    border-radius: var(--br-5xs);
+    background-color: var(--color-firebrick-100);
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-10xs);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  .search1 {
+    position: absolute;
+    top: 19px;
+    left: 32px;
+    letter-spacing: 0.25px;
+    line-height: 24px;
+    display: inline-block;
+    width: 179px;
+    height: 28px;
+  }
+  .rectangle-parent1 {
+    position: absolute;
+    top: 45px;
+    left: 316px;
+    width: 800px;
+    height: 60px;
+    font-size: var(--font-size-5xl);
+    color: var(--color-dimgray-300);
+  }
+  .sign-up1 {
+    position: relative;
+  }
+  .sign-up-container {
+    position: absolute;
+    top: 45px;
+    left: 1464px;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-firebrick-100);
+    width: 168px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-3xs);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-whitesmoke-100);
+  }
+  .akar-iconschevron-down5 {
+    position: absolute;
+    top: 10px;
+    left: 68px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+  .switcher-icon1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+  }
+  .akar-iconschevron-down-group {
+    position: absolute;
+    top: 55px;
+    left: 1672px;
+    width: 88px;
+    height: 40px;
+  }
+  .about1,
+  .frame-child1 {
+    position: absolute;
+    left: 0;
+  }
+  .frame-child1 {
+    bottom: 0;
+    background-color: var(--color-firebrick-100);
+    width: 1920px;
+    height: 490px;
+  }
+  .about1 {
+    top: 0;
+  }
+  .about-group,
+  .articles1,
+  .careers1 {
+    position: absolute;
+    top: 49px;
+    left: 0;
+  }
+  .about-group,
+  .careers1 {
+    top: 98px;
+  }
+  .about-group {
+    top: 157px;
+    left: 168px;
+    width: 89px;
+    height: 127px;
+  }
+  .company-logo-icon3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 68px;
+    object-fit: cover;
+  }
+  .bic-circle-icon1 {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .bic-circle-group {
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-3xs);
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-3xs);
+  }
+  .company-logo-group {
+    position: absolute;
+    top: 250px;
+    left: 1388px;
+    width: 382px;
+    height: 68px;
+  }
+  .contact-us1 {
+    position: absolute;
+    top: 147px;
+    left: 0;
+  }
+  .frame-icon,
+  .offers-group,
+  .support-group {
+    position: absolute;
+    top: 157px;
+    left: 606px;
+    width: 319px;
+    height: 176px;
+  }
+  .frame-icon,
+  .offers-group {
+    left: 337px;
+    width: 189px;
+    height: 127px;
+  }
+  .frame-icon {
+    top: 172px;
+    left: 1425px;
+    width: 308px;
+    height: 34px;
+  }
+  .rectangle-parent2 {
+    position: absolute;
+    top: 2702px;
+    left: 0;
+    width: 1920px;
+    height: 490px;
+    font-size: var(--font-size-5xl);
+    color: var(--color-whitesmoke-100);
+  }
+  .text7 {
+    position: relative;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .buttonbase7,
+  .content5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content5 {
+    flex-direction: row;
+    padding: var(--padding-4xs) var(--padding-5xs);
+  }
+  .buttonbase7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--br-5xs) 0 0 var(--br-5xs);
+    width: 49px;
+    height: 54px;
+    flex-direction: column;
+    color: var(--color-firebrick-100);
+  }
+  .text8 {
+    position: relative;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+  .buttonbase8 {
+    position: absolute;
+    top: 0;
+    left: 49px;
+    width: 49px;
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .text9 {
+    position: relative;
+    letter-spacing: 0.25px;
+    line-height: 24px;
+  }
+  .buttonbase10,
+  .buttonbase11,
+  .buttonbase9 {
+    position: absolute;
+    top: 0;
+    left: 98px;
+    width: 49px;
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttonbase10,
+  .buttonbase11 {
+    left: 147px;
+  }
+  .buttonbase11 {
+    left: 196px;
+  }
+  .text12 {
+    position: relative;
+    letter-spacing: 1px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .akar-iconschevron-down6 {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .buttonbase12 {
+    position: absolute;
+    top: 0;
+    left: 245px;
+    border-radius: 0 var(--br-5xs) var(--br-5xs) 0;
+    width: 147px;
+    height: 54px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-5xs) var(--padding-base);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-xs);
+  }
+  .buttonbase-group {
+    position: absolute;
+    top: 2544px;
+    left: 764px;
+    width: 392px;
+    height: 54px;
+  }
+  .help1 {
+    position: relative;
+    font-weight: 500;
+  }
+  .help-group {
+    position: absolute;
+    top: 55px;
+    left: 1325px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-9xs);
+  }
+  .auditions1,
+  .sort-by1 {
+    position: absolute;
+    color: var(--color-black);
+  }
+  .sort-by1 {
+    top: 1078px;
+    left: 1617px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+  }
+  .auditions1 {
+    top: 390px;
+    left: 148px;
+    font-size: var(--font-size-41xl);
+    letter-spacing: 0.25px;
+    line-height: 36px;
+  }
+  .audition-page-filter-item {
+    position: absolute;
+    top: 332.5px;
+    left: 147.5px;
+    border-top: 1px solid var(--color-firebrick-100);
+    box-sizing: border-box;
+    width: 1625px;
+    height: 1px;
+  }
+  .auditions2 {
+    position: relative;
+    font-weight: 600;
+  }
+  .auditions-container {
+    position: absolute;
+    top: 209px;
+    left: 854px;
+    border-radius: var(--br-9xs);
+    background-color: var(--color-firebrick-100);
+    box-shadow: 2px 1px 4px rgba(205, 205, 205, 0.25);
+    width: 190px;
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-3xs);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+  }
+  .shows-container,
+  .venues-container {
+    position: absolute;
+    background-color: var(--white);
+    width: 190px;
+  }
+  .venues-container {
+    top: 209px;
+    left: 375px;
+    border-radius: var(--br-9xs);
+    border: 1px solid var(--color-dimgray-500);
+    box-sizing: border-box;
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-3xs);
+    align-items: center;
+    justify-content: center;
+    color: var(--color-silver-100);
+  }
+  .shows-container {
+    left: 148px;
+  }
+  .classes-container,
+  .play-reads-container,
+  .shows-container {
+    top: 209px;
+    border-radius: var(--br-9xs);
+    border: 1px solid var(--color-dimgray-500);
+    box-sizing: border-box;
+    height: 78px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-3xs);
+    align-items: center;
+    justify-content: center;
+    color: var(--color-silver-100);
+  }
+  .classes-container {
+    position: absolute;
+    left: 601px;
+    background-color: var(--white);
+    width: 216px;
+  }
+  .play-reads-container {
+    left: 1080px;
+    width: 239px;
+  }
+  .buttonbase13,
+  .group-child2,
+  .play-reads-container {
+    position: absolute;
+    background-color: var(--white);
+  }
+  .buttonbase13 {
+    top: 2319px;
+    left: 1274px;
+    border-radius: var(--br-5xs) 0 0 var(--br-5xs);
+    border: 1px solid var(--typography-textdeactivated);
+    box-sizing: border-box;
+    width: 137px;
+    height: 49px;
+    overflow: hidden;
+    display: none;
+    flex-direction: row;
+    padding: var(--padding-5xs) var(--padding-base);
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-5xs);
+    font-size: var(--body-body2-size);
+    color: var(--color-darkslateblue);
+  }
+  .group-child2 {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-5xs);
+    box-shadow: 2px 2px 4px 4px rgba(205, 205, 205, 0.25);
+    width: 1624px;
+    height: 547px;
+  }
+  .chicago,
+  .march-152 {
+    position: absolute;
+    left: 658px;
+    letter-spacing: 0.25px;
+  }
+  .march-152 {
+    top: 52px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+  .chicago {
+    top: 116px;
+    font-size: var(--font-size-29xl);
+    color: var(--color-black);
+  }
+  .ambassador-theatre-new {
+    position: absolute;
+    top: 194px;
+    left: 658px;
+    text-decoration: underline;
+  }
+  .local-audition {
+    position: absolute;
+    top: 261px;
+    left: 658px;
+    color: var(--color-gray-500);
+  }
+  .mask-group-icon {
+    position: absolute;
+    top: 52px;
+    left: 75px;
+    width: 503px;
+    height: 443px;
+    object-fit: cover;
+  }
+  .read-more1 {
+    text-decoration: underline;
+    color: var(--color-firebrick-100);
+  }
+  .brief-role-description-container {
+    position: absolute;
+    top: 334px;
+    left: 658px;
+    letter-spacing: 0.25px;
+    line-height: 36px;
+    display: inline-block;
+    width: 881px;
+    height: 124px;
+    color: var(--color-gray-500);
+  }
+  .vector-icon4 {
+    position: relative;
+    width: 50px;
+    height: 45.88px;
+  }
+  .mdicards-heart-outline2 {
+    position: absolute;
+    top: 40px;
+    left: 1494px;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-6xs) var(--padding-8xs);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .rectangle-parent3 {
+    position: absolute;
+    top: 1136px;
+    left: 148px;
+    width: 1624px;
+    height: 547px;
+    color: var(--color-firebrick-100);
+  }
+  .filter1 {
+    position: absolute;
+    top: 524px;
+    left: 226px;
+    font-size: var(--font-size-29xl);
+  }
+  .frame-child2,
+  .online-audition {
+    position: absolute;
+    top: 652px;
+    left: 226px;
+  }
+  .frame-child2 {
+    top: 0;
+    left: 0;
+    border-radius: var(--br-xl);
+    background-color: #dbd7d7;
+    width: 61px;
+    height: 34px;
+  }
+  .frame-child3 {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    background-color: var(--color-gray-500);
+    width: 28px;
+    height: 28px;
+  }
+  .rectangle-parent4 {
+    position: absolute;
+    top: 656px;
+    left: 486px;
+    width: 61px;
+    height: 34px;
+  }
+  .audition-page-filter-inner {
+    position: absolute;
+    top: 605.5px;
+    left: 225.5px;
+    border-top: 1px dashed var(--color-gray-500);
+    box-sizing: border-box;
+    width: 1485px;
+    height: 1px;
+  }
+  .location1 {
+    position: absolute;
+    top: 717px;
+    left: 231px;
+  }
+  .audition-page-filter-child1 {
+    position: absolute;
+    top: 770px;
+    left: 231px;
+    border-radius: var(--br-9xs);
+    background-color: var(--white);
+    border: 1px solid var(--color-gray-500);
+    box-sizing: border-box;
+    width: 572px;
+    height: 45px;
+  }
+  .akar-iconschevron-down8 {
+    position: absolute;
+    top: 780px;
+    left: 769px;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+  }
+  .dates1 {
+    position: absolute;
+    top: 833px;
+    left: 231px;
+  }
+  .audition-page-filter-child2 {
+    position: absolute;
+    top: 886px;
+    left: 231px;
+    border-radius: var(--br-9xs);
+    background-color: var(--white);
+    border: 1px solid var(--color-gray-500);
+    box-sizing: border-box;
+    width: 572px;
+    height: 45px;
+  }
+  .material-symbolscalendar-mont-icon1 {
+    position: absolute;
+    top: 894px;
+    left: 768px;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+  }
+  .audition-page-filter-child3,
+  .gender {
+    position: absolute;
+    top: 717px;
+    left: 1021px;
+  }
+  .audition-page-filter-child3 {
+    top: 770px;
+    border-radius: var(--br-9xs);
+    background-color: var(--white);
+    border: 1px solid var(--color-gray-500);
+    box-sizing: border-box;
+    width: 572px;
+    height: 45px;
+  }
+  .akar-iconschevron-down9 {
+    position: absolute;
+    top: 780px;
+    left: 1559px;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+  }
+  .audition-page-filter-child4 {
+    position: absolute;
+    top: 887px;
+    left: 1021px;
+    border-radius: var(--br-9xs);
+    background-color: var(--white);
+    border: 1px solid var(--color-gray-500);
+    box-sizing: border-box;
+    width: 572px;
+    height: 45px;
+  }
+  .akar-iconschevron-down10 {
+    position: absolute;
+    top: 897px;
+    left: 1559px;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+  }
+  .age,
+  .reset1 {
+    position: absolute;
+    top: 834px;
+    left: 1021px;
+  }
+  .reset1 {
+    top: 570px;
+    left: 1648px;
+    font-size: var(--font-size-xl);
+    text-decoration: underline;
+    color: var(--color-firebrick-100);
+  }
+  .audition-page-filter {
+    position: relative;
+    background-color: var(--color-gray-200);
+    width: 100%;
+    height: 3192px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: var(--font-size-15xl);
+    color: var(--color-gray-500);
+    font-family: var(--body-body2);
+  }
+  
