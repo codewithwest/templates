@@ -5,7 +5,6 @@ import '../../styles/Forms.css';
 
 import { useState, useEffect } from 'react';
 import { initial_login_form_data } from '../../dataSchema/schemas.js';
-import { useNavigate } from 'react-router-dom';
 import { displayHandler, displaySwitch } from '../../functions/ConstFunctions';
 import { resolve } from '../../functions/ConstVars';
 
@@ -68,18 +67,13 @@ export default function Login(props) {
                         e.preventDefault()
                         display_handler.displayNone('login-form-cont')
                     }}>X</button>
-                {/* <div className='login-header fill center-content'> */}
                 <h1 className='fill m-0 center-content fw-bold'>
                     LOGIN
                 </h1>
-                {/* </div> */}
-                {/* <div className='login-inputs flex-col center-content'> */}
                 <input onChange={handleChange} type='email' minLength={5} name='login_email'
                     className='login_email login_err m-auto-hor b-none  ' placeholder='Email' required></input>
                 <input onChange={handleChange} type='password' name='login_password'
                     className='login_password m-auto-hor d-flex login_err b-none ' placeholder='Password' required></input>
-                {/* </div> */}
-                {/* <div className='center-content fill login-button'> */}
                 <button className='b-none fw-bold login-button 
                     center-content m-auto-hor'
                     onClick={(e) => {
@@ -89,7 +83,6 @@ export default function Login(props) {
                             inputErrorHighlight('login_err')
                     }}
                 >Login</button>
-                {/* </div> */}
                 <a href='' className='links fill center-content'
                     onClick={(e) => {
                         e.preventDefault()

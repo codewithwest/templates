@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { initial_registration_form_data } from '../../dataSchema/schemas.js';
 import { displayHandler, displaySwitch } from '../../functions/ConstFunctions';
 import { resolve } from '../../functions/ConstVars';
-import e from 'express';
 
 export default function Register({ auth_stat }) {
     const display_handler = new displayHandler()
@@ -51,13 +50,13 @@ export default function Register({ auth_stat }) {
                 </p>
             </div>
             <form className='reg-form flex-col center-content' method="post">
-                <button className='reg-form-collapse b-none bg-none'
+                <button className='reg-form-collapse h-100 b-none bg-none'
                     onClick={(e) => {
                         e.preventDefault()
                         display_handler.displayNone('reg-form-cont')
                     }}>X</button>
-                <p className='fill center-content m-auto fw-bold'>Register</p>
-
+                <p className='fill d-flex center-content m-auto fw-bold'>Register</p>
+            <div className='fill flex-col center-content'>
                 <input type='text' minLength={3} onChange={handleChange} name='reg_user_name'
                     className='reg_user_name b-none' placeholder='UserName' required></input>
                 <input type='email' minLength={5} onChange={handleChange} name='reg_email'
@@ -66,14 +65,15 @@ export default function Register({ auth_stat }) {
                     className='reg_password err_password b-none' placeholder='Password' required></input>
                 <input type='password' onChange={handleChange} name='reg_con_password'
                     className='reg_con_password err_password b-none' placeholder='Confirm password' required></input>
-
-                <button className='b-none fw-bold' onClick={(e) => {
+            </div>
+            <div className='fill center-content d-flex'>
+                <button className='register-button b-none fw-bold' onClick={(e) => {
                     e.preventDefault()
                     formdata.reg_con_password === formdata.reg_password ?
                         handleSubmit(formdata) :
                         inputErrorHighlight('err_password')
                 }}>Register</button>
-
+            </div>
                 <a href='' className='links fill center-content'
                     onClick={(e) => {
                         e.preventDefault()

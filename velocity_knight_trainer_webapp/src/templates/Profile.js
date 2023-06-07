@@ -3,7 +3,6 @@ import '../styles/Forms.css';
 
 import { useState, useEffect } from 'react';
 import { initial_login_form_data } from '../dataSchema/schemas.js';
-import { useNavigate } from 'react-router-dom';
 import { displayHandler, displaySwitch } from '../functions/ConstFunctions.js';
 
 
@@ -30,7 +29,6 @@ export default function Login(props) {
         _inputs.forEach(el =>
             el.style.boxShadow = "1.5px 1.5px 1px rgba(220,22,11,.6),-1.5px -1.5px 1px rgba(220,22,11,.6)")
     }
-    // let  PostRegData= () =>
 
 
     async function loginSuccess() {
@@ -38,26 +36,11 @@ export default function Login(props) {
         props.onChange()
     }
 
-    // const handleSubmit = async (_formdata) => {
-    //     await fetch('http://192.168.19.34:3070/velocity_knight_trainer/login/', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(_formdata)
-    //     })
-    //         .then(res => res.json())
-    //         .then(async res => {
-    //             await res['success'] ?
-    //                 await loginSuccess() :
-    //                 console.log(res['failure'])
-    //         })
-    //         .catch((err) => console.log(err))
-    // }
     const user = props.value
 
 
     return (
+        props.value?
         <div className="profile-form-cont fill  center-content">
 
             <form className='profile-form flex-col'>
@@ -80,7 +63,6 @@ export default function Login(props) {
                     <input value={user.fullName} name="full_name" type='text' />
                 </div>
                 <div>
-
                     <button onClick={(e) => {
                         e.preventDefault()
                         sessionStorage.clear()
@@ -104,6 +86,6 @@ export default function Login(props) {
 
                 </div>
             </form>
-        </div>
+        </div>:true
     )
 }  
