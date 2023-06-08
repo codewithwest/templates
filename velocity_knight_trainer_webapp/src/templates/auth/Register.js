@@ -19,11 +19,6 @@ export default function Register({ auth_stat }) {
         _inputs.forEach(el =>
             el.style.boxShadow = "1.5px 1.5px 1px rgba(220,22,11,.6),-1.5px -1.5px 1px rgba(220,22,11,.6)")
     }
-    // let  PostRegData= () =>
-    // useEffect(() => {
-    // }, [])
-
-
     const handleSubmit = async (_formdata) => {
         fetch(`${resolve}/velocity_knight_trainer/register/`, {
             method: 'POST',
@@ -33,7 +28,7 @@ export default function Register({ auth_stat }) {
             body: JSON.stringify(_formdata)
         }).then(res => res.json())
             .then(async res => {
-                await res['success'] ?
+                await res.success ?
 
                     await display_switch.displaySuccessMessage('reg-success', 'reg-form', 'reg-form-cont')
                     :
@@ -50,30 +45,30 @@ export default function Register({ auth_stat }) {
                 </p>
             </div>
             <form className='reg-form flex-col center-content' method="post">
-                <button className='reg-form-collapse h-100 b-none bg-none'
+                <a className='reg-form-collapse h-100 center-content  b-none bg-none'
                     onClick={(e) => {
                         e.preventDefault()
                         display_handler.displayNone('reg-form-cont')
-                    }}>X</button>
+                    }}>X</a>
                 <p className='fill d-flex center-content m-auto fw-bold'>Register</p>
-            <div className='fill flex-col center-content'>
-                <input type='text' minLength={3} onChange={handleChange} name='reg_user_name'
-                    className='reg_user_name b-none' placeholder='UserName' required></input>
-                <input type='email' minLength={5} onChange={handleChange} name='reg_email'
-                    className='reg_email b-none' placeholder='Email' required></input>
-                <input type='password' onChange={handleChange} name='reg_password'
-                    className='reg_password err_password b-none' placeholder='Password' required></input>
-                <input type='password' onChange={handleChange} name='reg_con_password'
-                    className='reg_con_password err_password b-none' placeholder='Confirm password' required></input>
-            </div>
-            <div className='fill center-content d-flex'>
-                <button className='register-button b-none fw-bold' onClick={(e) => {
-                    e.preventDefault()
-                    formdata.reg_con_password === formdata.reg_password ?
-                        handleSubmit(formdata) :
-                        inputErrorHighlight('err_password')
-                }}>Register</button>
-            </div>
+                <div className='fill flex-col center-content'>
+                    <input type='text' minLength={3} onChange={handleChange} name='reg_user_name'
+                        className='reg_user_name b-none' placeholder='UserName' required></input>
+                    <input type='email' minLength={5} onChange={handleChange} name='reg_email'
+                        className='reg_email b-none' placeholder='Email' required></input>
+                    <input type='password' onChange={handleChange} name='reg_password'
+                        className='reg_password err_password b-none' placeholder='Password' required></input>
+                    <input type='password' onChange={handleChange} name='reg_con_password'
+                        className='reg_con_password err_password b-none' placeholder='Confirm password' required></input>
+                </div>
+                <div className='fill center-content d-flex'>
+                    <button className='register-button b-none fw-bold' onClick={(e) => {
+                        e.preventDefault()
+                        formdata.reg_con_password === formdata.reg_password ?
+                            handleSubmit(formdata) :
+                            inputErrorHighlight('err_password')
+                    }}>Register</button>
+                </div>
                 <a href='' className='links fill center-content'
                     onClick={(e) => {
                         e.preventDefault()

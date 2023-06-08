@@ -6,17 +6,10 @@
             rgba(22, 22, 22, .7), transparent,
             rgba(22, 22, 22, .4), transparent,
             rgba(22, 22, 22, .3), transparent,
-            rgba(22, 22, 22, .4), transparent), #7b8638;
+            rgba(22, 22, 22, .4), transparent), #313517f7;
 }
 
-.login-form-cont {
-    position: absolute;
-    top: 0;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background: var(--form-cont-bg);
-}
+ 
 
 
 .login-form a {
@@ -29,7 +22,7 @@
     background: none;
     height: 60px;
     flex: 1 0 70px;
-    /* width: 80%; */
+    text-indent: 5px;
     margin: 10px;
     border: 1px solid rgba(25, 26, 25, 0.7);
     outline: rgba(4, 112, 207, 0.7);
@@ -84,6 +77,7 @@
     position: absolute;
     display: none;
     top: 0;
+    left: 0;
     background: var(--form-cont-bg);
 }
 
@@ -101,7 +95,8 @@
     grid-template-columns: 100%;
 }
 
-.reg-form-collapse { 
+.reg-form-collapse,
+    .login-form-collapse {
     width: 10%;
     justify-self: flex-end;
     box-shadow: -.6px .6px rgba(143, 199, 2, 0.4);
@@ -205,15 +200,22 @@
     background: rgba(255, 51, 0, 0.615);
 }
 
-.profil-form-collapse,
-.login-form-collapse {
+.login-form-collapse,
+.profile-form-collapse
+
+ {
     font-size: inherit;
+    font-size: large;
     color: inherit;
-    position: relative;
     align-self: flex-end;
+    justify-self: flex-end;
     width: 40px;
     height: 40px;
-    border: 1px solid rgba(25, 26, 25, 0.7);
+    border: 2px solid rgba(204, 249, 204, 0.7);
+}
+.profil-form-collapse,
+.login-form-collapse:hover{
+    background: rgba(255, 51, 0, 0.315);
 }
 
 @media screen and (max-width:450px) {

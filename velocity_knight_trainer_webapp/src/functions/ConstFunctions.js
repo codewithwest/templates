@@ -27,7 +27,7 @@ class displaySwitch extends displayHandler {
         setTimeout(() => {
             this.swapDisplayGrid(form_div, succ_div)
             this.displayNone(modal_cont)
-        }, 100)
+        }, 1000)
     }
 }
 export {

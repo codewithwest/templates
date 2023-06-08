@@ -14,12 +14,8 @@ export default function Login(props) {
     function handleLoginState(val) {
         props.onChange(!val);
     }
-    let [first, setfirst] = useState(0)
-    function IncNum(first) {
-        setfirst(first + 1)
-    }
-    setInterval(() => IncNum(first), 1000)
     const [formdata, setFormData] = useState(initial_login_form_data);
+    const [response_message, setLoginRespenseMessage] = useState()
     const handleChange = (e) => {
         setFormData({ ...formdata, [e.target.name]: e.target.value })
     }
@@ -28,10 +24,10 @@ export default function Login(props) {
         _inputs.forEach(el =>
             el.style.boxShadow = "1.5px 1.5px 1px rgba(220,22,11,.6),-1.5px -1.5px 1px rgba(220,22,11,.6)")
     }
-    // let  PostRegData= () =>
 
-    const handleSubmit = async (_formdata) => {
-        await fetch(`${resolve}/velocity_knight_trainer/login/`, {
+    const HandleSubmit = async (_formdata) => {
+        // useEffect(() => {
+        fetch(`${resolve}/velocity_knight_trainer/login/`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -40,33 +36,43 @@ export default function Login(props) {
         })
             .then(res => res.json())
             .then(async res => {
-                await res ?
-                    loginSuccess(res) :
-                    console.log(res)
+                await res.token ?
+                    loginMessage(res) :
+                    loginMessage(res)
             })
             .catch((err) => console.log(err))
+        // }, [])
     }
+    function loginMessage(login_response) {
+        if (login_response.token) {
+            sessionStorage.setItem("token", login_response.token)
+            setLoginRespenseMessage('Successfully Logged In')
+            display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
+            props.onChange()
+            document.location.reload()
 
-    function loginSuccess(_session_token) {
-        display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
-        sessionStorage.setItem("token", _session_token['token'])
-        props.onChange()
-        // document.location.reload()
+        } else {
+            console.log(login_response.failure)
+            setLoginRespenseMessage(login_response.failure)
+            display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
+            setTimeout(() =>
+                display_handler.displayFlex('login-form-cont'), 1000)
+        }
     }
     return (
-        <div className="login-form-cont d-flex center-content">
+        <div className="login-form-cont fill center-content">
             <div className='login-success center-content'>
                 <p className='text-center bg-success center-content'>
-                    You Have successfully logged In
+                    {response_message}
                 </p>
             </div>
             <h1>{props.value}</h1>
             <form className='login-form flex-col' method="post">
-                <button className='login-form-collapse b-none bg-none'
+                <a className='login-form-collapse fw-bold h-100 center-content b-none bg-none'
                     onClick={(e) => {
                         e.preventDefault()
                         display_handler.displayNone('login-form-cont')
-                    }}>X</button>
+                    }}>X</a>
                 <h1 className='fill m-0 center-content fw-bold'>
                     LOGIN
                 </h1>
@@ -79,7 +85,7 @@ export default function Login(props) {
                     onClick={(e) => {
                         e.preventDefault()
                         formdata.login_email.length > 3 && formdata.login_password.length > 3 ?
-                            handleSubmit(formdata) :
+                            HandleSubmit(formdata) :
                             inputErrorHighlight('login_err')
                     }}
                 >Login</button>

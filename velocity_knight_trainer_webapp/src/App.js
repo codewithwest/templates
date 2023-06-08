@@ -9,6 +9,7 @@ const Login = lazy(() => import('./templates/auth/Login'))
 const Register = lazy(() => import('./templates/auth/Register'))
 const Profile = lazy(() => import('./templates/Profile'))
 
+
 const display_handler = new displayHandler()
 
 function navigate(_nav_link_div, _ind) {
@@ -26,66 +27,71 @@ function navigate(_nav_link_div, _ind) {
 
 
 function App() {
-
+  var session_token = sessionStorage.getItem('token')
   const [initial_login_state, set_initial_login_state] = useState()
-  const [login_data, setLoginData]=useState()
+  const [login_data, setLoginData] = useState()
   useEffect(() => {
-    const getSession = () => sessionStorage.getItem('token')
-    ? set_initial_login_state(true) : set_initial_login_state(false)
+    session_token
+      ? set_initial_login_state(true) : set_initial_login_state(false)
     const getLoginState = () => {
-      const headers = { 
+      const headers = {
         mode: 'cors',
-        'Content-Type':  'application/json',
-        'Authentication': `Bearer ${sessionStorage.getItem('token')}` }
-      console.log(headers)
+        'Content-Type': 'application/json',
+        'authorization': `Bearer ${sessionStorage.getItem('token')}`
+      }
       //do something when we click
-      fetch(`${resolve}/user/data`,{headers})
-        .then(async res => await console.log(res.json()))
-        .then(data => data.hasOwnProperty('userid')
-          ? ()=>{
+      fetch(`${resolve}/velocity_knight_trainer/data`, { headers })
+        .then(async res => await res.json())
+        .then(data => {
+          if (data.message) {
             set_initial_login_state(true)
-            setLoginData(data)
-          } :
-          set_initial_login_state(false)).catch(e=>console.log(e))
+            setLoginData(data.authorizedData.user)
+          } else
+            set_initial_login_state(false)
+        })
+        .catch(e => console.log(e))
     };
-   
 
-
-    // document.addEventListener('mousedown', handleClick);
     return () => {
-      getLoginState()
+      session_token == null ? console.log('No Session Available') :
+        getLoginState()
 
     };
-  }, [])
-  // return
-  // }
 
+  }, [])
   const [login_state, loginState] = useState(initial_login_state)
   function handleLoginState() {
     // Here, we invoke the callback with the new value
-    loginState(!login_state);
+    loginState(!login_state)
+    set_initial_login_state(!initial_login_state)
+
   }
 
   return (
-    <div className="main">
-      <button className='login-state border'
-        onClick={() => login_state ?
+    <div className="main d-flex center-content">
+      <button className='login-state b-none  pos-abs'
+        onClick={() => initial_login_state ?
           display_handler.displayFlex('profile-form-cont') :
           display_handler.displayFlex('login-form-cont')}>
-        {login_state ? logged_in_icon : logged_out_icon}
+        {initial_login_state ? logged_in_icon : logged_out_icon}
       </button>
-      <nav className='nav-cont'>
-        <div className='nav'>
-          <a className='main_nav_link' onClick={() => navigate('.main_nav_link', 0)}>HOME</a>
-          <a className='main_nav_link' onClick={() => navigate('.main_nav_link', 1)}>GALLERY</a>
-          <a className='main_nav_link' onClick={() => navigate('.main_nav_link', 2)}>MORE</a>
+      <nav className='nav-cont center-content d-flex'>
+        <div className='nav flex-col fill border'>
+          <a className='main_nav_link d-flex fill center-content'
+            onClick={() => navigate('.main_nav_link', 0)}>INFO</a>
+          <a className='main_nav_link d-flex fill center-content'
+            onClick={() => navigate('.main_nav_link', 1)}>CREATE SESSION</a>
+          <a className='main_nav_link d-flex fill center-content'
+            onClick={() => navigate('.main_nav_link', 2)}>VIEW SESSIONS</a>
         </div>
       </nav>
       <section className='main-cont'>
-        <h1 className='bg-success'>{`${login_state}`}</h1>
-        <Login onChange={handleLoginState} value={login_state?login_data:console.log(login_data)} />
+        {/* <h1 className='bg-success pos-abs top-0 left-0'>{`${login_state}`}</h1> */}
+        <Login onChange={handleLoginState}
+        />
         <Register />
-        <Profile onChange={handleLoginState} />
+        <Profile onChange={handleLoginState}
+          value={initial_login_state ? login_data : ""} />
         <div className='home body-cont'></div>
         <div className='register body-cont'></div>
         <div className='more body-cont'>white cont</div>

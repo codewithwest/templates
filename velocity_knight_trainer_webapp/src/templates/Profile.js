@@ -4,9 +4,10 @@ import '../styles/Forms.css';
 import { useState, useEffect } from 'react';
 import { initial_login_form_data } from '../dataSchema/schemas.js';
 import { displayHandler, displaySwitch } from '../functions/ConstFunctions.js';
+import { resolve } from '../functions/ConstVars';
 
 
-export default function Login(props) {
+export default function Profile(props) {
     const display_handler = new displayHandler()
     const display_switch = new displaySwitch();
 
@@ -18,7 +19,7 @@ export default function Login(props) {
         setfirst(first + 1)
     }
     setInterval(() => IncNum(first), 1000)
-    const [auth_state, loginState] = useState(props.value)
+    // const [auth_state, loginState] = useState(props.value)
     const [formdata, setFormData] = useState(initial_login_form_data);
     const [login_response, setLoginResponse] = useState();
     const handleChange = (e) => {
@@ -29,47 +30,60 @@ export default function Login(props) {
         _inputs.forEach(el =>
             el.style.boxShadow = "1.5px 1.5px 1px rgba(220,22,11,.6),-1.5px -1.5px 1px rgba(220,22,11,.6)")
     }
-
+    const handleSubmit = async (_formdata) => {
+        fetch(`${resolve}/velocity_knight_trainer/update/`, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(_formdata)
+        }).then(res => res.json())
+            .then(async res => {
+                await res.success ?
+                    // await display_switch.displaySuccessMessage('reg-success', 'reg-form', 'reg-form-cont')
+                    document.location.reload()
+                    :
+                    console.log(res)
+            })
+            .catch((err) => console.log(err))
+    }
 
     async function loginSuccess() {
         await display_switch.displaySuccessMessage('login-success', 'login-form', 'login-form-cont')
         props.onChange()
     }
-
-    const user = props.value
+    const user_data = props.value
 
 
     return (
-        props.value?
+        // props.value ?
         <div className="profile-form-cont fill  center-content">
-
             <form className='profile-form flex-col'>
-                <button className='profil-form-collapse b-none bg-none'
+                <a className='profile-form-collapse center-content b-none bg-none'
                     onClick={(e) => {
                         e.preventDefault()
                         display_handler.displayNone('profile-form-cont')
-                    }}>X</button>
-                {/* {[props.value.username]} */}
+                    }}>X</a>
                 <div>
                     <label htmlFor="username">Username</label>
-                    <input value={user.username} name="username" type='text' />
+                    <input onChange={handleChange} defaultValue={typeof user_data === 'object' ? user_data.username : ''} name="username" type='text' />
                 </div>
                 <div>
                     <label htmlFor="email">Email</label>
-                    <input value={user.email} name="email" type='text' />
+                    <input onChange={handleChange} defaultValue={typeof user_data === 'object' ? user_data.email : ''} name="email" type='text' />
                 </div>
                 <div>
                     <label htmlFor="full_name">Full Name</label>
-                    <input value={user.fullName} name="full_name" type='text' />
+                    <input onChange={handleChange} defaultValue={typeof user_data === 'object' ? user_data.fullName : ""} name="full_name" type='text' />
                 </div>
                 <div>
-                    <button onClick={(e) => {
+                    <button hidden disabled onClick={(e) => {
                         e.preventDefault()
                         sessionStorage.clear()
                         props.onChange()
                         document.location.reload()
                     }} className="reset-password" type='submit'>Change Password</button>
-                    <button onClick={(e) => {
+                    <button hidden onClick={(e) => {
                         e.preventDefault()
                         sessionStorage.clear()
                         props.onChange()
@@ -86,6 +100,7 @@ export default function Login(props) {
 
                 </div>
             </form>
-        </div>:true
+        </div>
+        // : true
     )
 }  
