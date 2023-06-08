@@ -13,14 +13,13 @@
     background: rgba(22, 22, 22, .7);
 }
 
-
 .nav {
-    flex: 1 0 150px;
-    display: grid;
-    grid-template-rows: repeat(4, 15%);
+    flex: 1 0 250px;
 }
 
-.nav a {}
+.nav a {
+    height: 90px;
+}
 
 .collapse-nav {
     z-index: 5;
@@ -61,7 +60,7 @@
 }
 
 .content {
-    flex: 1 0 550px;
+    flex: 1 0 450px;
     min-height: 100%;
     gap: 10px;
     padding: 10px;
@@ -72,12 +71,10 @@
     box-shadow: 1.5px 1.5px rgba(17, 17, 17, 0.3),
         -1.5px -1.5px rgba(17, 17, 17, 0.3);
     color: #fff;
-    /* flex: 1 0 350px; */
-    width: 400px;
+    width: 410px;
     border-radius: 5px;
 }
 
-.product-img,
 .product-price,
 .product-avail,
 .product-functions {
@@ -96,10 +93,13 @@
 }
 
 .product-desc {
-    flex: 1 0 200px;
+    flex: 1 0 250px;
     height: var(--product-items-auto-height);
 }
-
+.product-avail,
+.product-functions-cont {
+    height: var(--product-items-auto-height);
+}
 .product-desc h2,
 .product-avail h2,
 .product-price h2,
@@ -113,13 +113,17 @@
     box-shadow: 1px 1px rgba(47, 47, 46, 0.527);
 }
 
-.product-avail,
-.product-functions {
-    height: var(--product-items-auto-height);
+.product-desc p{
+    padding: 5%;
+    height: 70%;
+    width: 90%;
+    overflow-y:hidden;
 }
 
+
+
 .product-price {
-    width: 120px;
+    width: 1 0 120px;
 }
 
 .product-functions button {
@@ -148,11 +152,12 @@
     }
 
     .nav {
-        height: auto;
-        grid-template-rows: 20%;
+            grid-template-rows: 20%;
     }
 
     .product-cont {
+        align-items: center;
+        justify-content: center;
         font-size: smaller;
         width: 95%;
     }
@@ -166,6 +171,7 @@
     .product-avail h2,
     .product-price h2,
     .product-functions-cont h2 {
+        height: 30%;
         font-size: small;
     }
 
@@ -173,16 +179,18 @@
     .product-desc {
         flex: 1 0 200px;
     }
+    .product-functions button{
+        height: 50px;
+    }
 
-    .product-functions {
-        height: var(--product-items-min-height);
+    .product-functions-cont{
+        height: var(--product-items-auto-height);
     }
 
     .product-price,
     .product-avail {
-        border: 1px solid red;
         flex: 1 0 100px;
-        height: var(--product-items-min-height);
+        height: var(--product-items-auto-height);
     }
 
 }

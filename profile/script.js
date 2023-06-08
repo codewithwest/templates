@@ -3,7 +3,9 @@ let projectImgs, projNav, webapps, websites, desktop, mobile, links
 projectImgs = document.querySelectorAll('.proj-link')
 projNav = document.querySelectorAll('.proj-nav')
 links = {
-    websites: ['https://connex-clone.vercel.app/', 'https://full-stack-101.vercel.app/', 'https://velocityvi.000webhostapp.com/', ''],
+    websites: ['https://connex-clone.vercel.app/',
+        'https://full-stack-101.vercel.app/',
+        'https://velocityvi.000webhostapp.com/', ''],
     webapps: ['https://west-dynamics-fp9t.vercel.app/', '', '', ''],
     mobile: ['', '', '', ''],
     desktop: ['', '', '', '']
