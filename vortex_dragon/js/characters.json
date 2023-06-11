@@ -1,0 +1,39 @@
+[
+    {
+        "id":0,
+        "name": "Roshi",
+        "powerLevel": 1000,
+        "image":"./images/logo.jpg"
+
+    },
+    {
+        "id":1,
+        "name": "Gohan",
+        "powerLevel": 2000,
+        "image":"./images/logo.jpg"
+
+    },
+    {
+        "id":2,
+        "name": "Bulma",
+        "powerLevel": 500,
+        "image":"./images/logo.jpg"
+
+    },
+    {
+        "id":3,
+        "name": "Vegita",
+        "powerLevel": 10000,
+        "image":"./images/logo.jpg"
+
+    },
+    {
+        "id":4,
+        "name":"Krillin",
+        "powerLevel": 1000,
+        "image":"./images/logo.jpg"
+
+    }
+
+    
+]

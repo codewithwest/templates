@@ -50,10 +50,7 @@
 .navCont .nav-a:hover {
     background: rgba(100, 100, 100, .2);
     font-weight: 800;
-
 }
-
-
 
 .main-footer {
     display: grid;
@@ -85,6 +82,7 @@
 }
 
 .footer-header h1 {
+    color: rgba(100, 160, 160, .9);
     font-size: 160%;
 }
 
@@ -102,7 +100,7 @@
     font-style: italic;
 }
 
-.footer-body p :hover {
+.footer-body p:hover {
     text-decoration: underline;
 }
 

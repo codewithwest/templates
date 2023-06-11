@@ -3,7 +3,6 @@
 export let home = () => {
     (
         () => {
-
             let projBtns, projDivs, cardObj, stripEl
             cardObj = {
                 web: [
@@ -12,29 +11,29 @@ export let home = () => {
                             "A masterpiece full stack ecommerce web platform, Built with laravel handles all the e commerce functionalities and uses pop up models to facilitate checkout purposes, allowing the user to register, login, logout, checkout and check out. Also provides all admin priviledges"],
                         ['php', 'css', 'mysql'],
                         ['http://connex.infinityfreeapp.com/',
-                            'https://github.com/codewithwest/templates/tree/master/full_stack_connex']],
+                            'https://github.com/codewithwest/php_web/tree/master/full_stack_connex']],
                     ['projects/web/velocityvi',
                         ["Velocity VI",
                             "A masterpiece full stack ecommerce web platform, built using, bootstrap on the front end and PHP, jQuery and Ajax for MYSQL database calls.With best practices(MVC) built in the code.The payment process is completed with a world-wide payment gateway API"],
                         ['php', 'bootstrap', 'mysql'],
                         ['https://velocityvi.000webhostapp.com/',
-                            'https://github.com/codewithwest/templates/tree/master/velocity_vi_php']],
+                            'https://github.com/codewithwest/php_web/tree/master/velocity_vi_php']],
                     ['projects/web/rowdyp',
                         ["Fsca Hackerthorn",
                             "This a 12 hours project built with html css and js for a hackerthon that aims to financially educate people using games, this game mimics monopoly just with a touch of south african feel."],
                         ['html', 'css', 'js'],
-                        ['https://codewithwest.github.io/templates/fsca_hacker/', 'https://github.com/codewithwest/templates/tree/master/fsca_hacker']],
+                        ['https://codewithwest.github.io/templates/fsca_hacker/',
+                            'https://github.com/codewithwest/templates/tree/master/fsca_hacker']],
                 ],
                 mobile: [
                     ['projects/mobile/flutter',
                         ["Flutter Helix", "A mobile app, built in flutter of dart. It uses firebase as a data base to pass in data from firestore, allows for ofline addition of posts and syncs on when back online"],
                         ['flutter', 'firebase', 'dart'],
-                        ['https://velocityvi.000webhostapp.com/', 'https://github.com/codewithwest/templates/tree/master/velocity_vi_php']],
+                        [' ', ' ']],
                     ['projects/mobile/react-native',
                         ["React Cross", "A mobile React-Native App, Uses react-bottom tabs to navigate across tabs to display list off products, it features a login and register screen"],
                         ['react', 'firebase', 'mysql'],
-                        ['https://codewithwest.github.io/templates/connex_clone/', 'https://github.com/codewithwest/templates/tree/master/connex_clone']],
-
+                        [' ', '']],
                 ],
             }
             // console.log(projBtns)

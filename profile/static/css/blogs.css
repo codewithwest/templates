@@ -1,0 +1,16 @@
+.blogs-cont {
+    height: 50vh;
+}
+
+.blogs-cont p {
+    font-size: 20px ;
+    width: 300px;
+    height: 300px;
+    border: 1px dotted red;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-delay: 40ms;
+    animation-name: comingsoon;
+
+}
+

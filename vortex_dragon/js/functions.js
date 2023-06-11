@@ -9,7 +9,8 @@ export {
     onButtonClickShowFlex,
     onButtonClickShowGrid,
     onButtonClickCollapse,
-    startGame
+    startGame,
+    chosenPlayer
 }
 
 function loadGamePlay(_blank_cards, _game_cont) {
@@ -210,4 +211,21 @@ function onButtonClickCollapse(_clicked_button, _div_to_collapse) {
 function startGame() {
     onButtonClickCollapse('select-player', 'choose-player')
 
-} 
+}
+function chosenPlayer() {
+
+    setTimeout(() => {
+        let all_select_player_btns = document.querySelectorAll('.select-player')
+        all_select_player_btns.forEach((el, all_select_player_btns) => {
+            el.addEventListener('click', (e) => {
+                let avater_name = el.parentElement.children[0].innerHTML
+                let say_name = new SpeechSynthesisUtterance(avater_name)
+                // .speak(say_name)
+                speechSynthesis.speak(say_name)
+                game_controller.player_chosen = avater_name
+                console.log(game_controller.player_chosen)
+            })
+        })
+    }, 1000)
+
+}

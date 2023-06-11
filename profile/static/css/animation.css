@@ -1,0 +1,51 @@
+@keyframes comingsoon {
+    10% {
+        font-size: 22px;
+        box-shadow: 1px 1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    20% {
+        font-size: 26px;
+        box-shadow: -1px -1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    30% {
+        font-size: 30px;
+        box-shadow: 1px 1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    40% {
+        font-size: 34px;
+        box-shadow: -1px -1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    50% {
+        font-size: 38px;
+        box-shadow: 1px 1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    60% {
+        font-size: 34px;
+        box-shadow: -1px -1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    70% {
+        font-size: 32px;
+        box-shadow: 1px 1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    80% {
+        font-size: 30px;
+        box-shadow: -1px -1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    90% {
+        font-size: 28px;
+        box-shadow: 1px 1px 1px rgba(242, 123, 3, 0.871);
+    }
+
+    100% {
+        font-size: 24px;
+        box-shadow: -1px -1px 1px rgba(242, 123, 3, 0.871);
+    }
+}
