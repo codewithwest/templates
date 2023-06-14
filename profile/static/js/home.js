@@ -29,11 +29,11 @@ export let home = () => {
                     ['projects/mobile/flutter',
                         ["Flutter Helix", "A mobile app, built in flutter of dart. It uses firebase as a data base to pass in data from firestore, allows for ofline addition of posts and syncs on when back online"],
                         ['flutter', 'firebase', 'dart'],
-                        [' ', ' ']],
+                        [' ', 'https://github.com/codewithwest/flutter_apps/tree/master/west_dynamics_services']],
                     ['projects/mobile/react-native',
                         ["React Cross", "A mobile React-Native App, Uses react-bottom tabs to navigate across tabs to display list off products, it features a login and register screen"],
                         ['react', 'firebase', 'mysql'],
-                        [' ', '']],
+                        [' ', 'https://github.com/codewithwest/react_native_app/tree/master/App_Functionality']],
                 ],
             }
             // console.log(projBtns)
