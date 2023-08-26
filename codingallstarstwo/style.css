@@ -27,6 +27,7 @@ header>nav{
 }
 header>nav>a {
    padding:35px 55px;
+   cursor: not-allowed;
    text-decoration: none;
    color: inherit;
 }
