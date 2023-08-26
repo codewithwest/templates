@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+    --main-bg-color:rgba(2, 80, 58, 0.974);
+    --sec-text-color: rgba(149, 6, 144, 0.884);
+    --main-text-color:white;
+}
+body{
+    height: 100%;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    letter-spacing: 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background: linear-gradient(12deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%); */
+}
+/* Dummy Header */
+header>nav{
+    box-shadow: 1px 1px 2px var(--sec-text-color),
+     -1px -1px 2px var(--sec-text-color);
+     border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    
+}
+header>nav>a {
+   padding:35px 55px;
+   text-decoration: none;
+   color: inherit;
+}
+header>nav>a:hover {
+    background: var(--sec-text-color);
+    color: aliceblue;
+}
+
+/* main */
+main{
+    padding: 20px;
+    gap: 10px;
+    height: 76.5vh;
+}
+main>div{
+    /* background: red; */
+    flex: 1 0 250px;
+    height: fit-content;
+}
+
+
+main>.three-d {
+    background: var(--main-text-color);
+    cursor: alias;
+    transition: all 2s;
+    box-shadow: 1px 1px  10px rgba(149, 6, 144, 0.884);
+    border-radius: 10px;
+    padding:2px 3px;
+}
+main>.three-d>div{
+    border-radius: inherit;
+    height: 30px;
+    padding: 10px;
+    background: var(--main-bg-color);
+    margin: .1px;
+    transition: all 1s;
+}
+main>.three-d::before{
+    content: "";
+    position: relative;
+    margin-bottom: 20px;
+}
+main>.three-d:hover .three-d-inner{
+    position: relative;
+    width: inherit;
+    transition: all 1s;
+    perspective: 120px;
+    transform: rotateX(80deg)  translateZ(30px);
+}
+main>.three-d:hover::after{
+    color: var(--sec-text-color);
+    content: "This is the content that comes with before \and after pseudo element incomporating transformations enjoy!";
+    transition: content 2s;
+    -webkit-transition: all 3s;
+}
+/* Toogle Button */
+.slider {
+    background-color: #ffffff2b;
+    border-radius: 100px;
+    padding: 1px;
+    margin: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.2s  0s;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 29px;
+    box-shadow: 1px 1px 5px rgb(47, 158, 255);
+}
+
+.slider::after {
+    content: "";
+    display: flex;
+    top: 2.3px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #e3e3e3;
+    border-radius: 200px;
+    position: absolute;
+    box-shadow: transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    transition: left 300ms  0s, background-color 300ms  0s;
+    will-change: left, background-color;
+}
+
+.toogle input[type="checkbox"]:checked+.slider {
+   box-shadow: 1px 1px 5px rgba(5, 190, 137, 0.974);
+   background: rgba(84, 137, 5, 0.605);
+   
+}
+
+.toogle input[type="checkbox"]:checked+.slider::after {
+    left: 24px;
+}
+
+.toogle input[type="checkbox"] {
+    display: none;
+}
+/* Footer */
+footer{
+    margin-top: auto;
+}
+footer>.by-line {
+    color: rgba(250, 235, 215, 0.734);
+    background: rgba(55, 55, 55, 0.974);
+    padding: 5px;
+}
+
+
+footer>.by-line>p {
+    margin-left: auto;
+}
+
+@media screen and (max-width:600px) {
+    main {
+            padding: 10px;
+        }
+    header>nav>a {
+            padding: 15px 35px;
+        }
+}
+@media screen and (min-width:900px) {
+    main {
+       width: 80%;
+    }
+}
