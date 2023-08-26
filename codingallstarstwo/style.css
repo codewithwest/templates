@@ -128,7 +128,10 @@ main>.three-d:hover::after{
 }
 /* Footer */
 footer{
-    margin-top: auto;
+    /* margin-top: auto; */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 footer>.by-line {
     color: rgba(250, 235, 215, 0.734);
@@ -152,5 +155,6 @@ footer>.by-line>p {
 @media screen and (min-width:900px) {
     main {
        width: 80%;
+       margin: auto 0;
     }
 }
