@@ -1,0 +1,56 @@
+/* Page Main Body */
+main {
+    padding: 20px 0;
+    transition: all 2s;
+}
+main>h1{
+    margin: 10px;
+}
+main>img{
+    max-height: 400px;
+}
+main>.info-divs-cont>div>.img{
+    max-height: 300px;
+    flex: 1 0 250px;
+}
+main>.info-divs-cont>div>.main {
+    flex: 1 0 250px;
+}
+main>.info-divs-cont>div>.main>h3,
+main>.info-divs-cont>div>.main>.footer,
+main>.info-divs-cont>div>.main>p {
+    margin: 22px;
+
+}
+
+main>.info-divs-cont>div>.main>.footer {
+margin-top: auto;
+}main>.info-divs-cont>div>.main>.footer>a{
+    padding:5px 10px;
+    color: inherit;
+}
+main>.info-divs-cont>div>.main>.footer>a:hover {
+    background:var(--main-text-color);
+    color: black;
+}
+main>.info-divs-cont>div>.main>.footer svg {
+    height: 40px;
+    width: 40px;
+    animation: link-in 3s ease infinite;
+
+}
+@keyframes link-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@media screen and (min-width:900px) {
+    main{
+        width: 85%;
+        transition: all 2s;
+    }
+}
